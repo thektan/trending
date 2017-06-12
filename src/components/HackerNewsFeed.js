@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import hnapi from 'firebase-hackernews';
 import 'whatwg-fetch';
 
 class HackerNewsFeed extends Component {
@@ -11,13 +12,13 @@ class HackerNewsFeed extends Component {
 	}
 
 	componentDidMount() {
-		fetch(
-			'https://hacker-news.firebaseio.com/v0/topstories.json',
-		).then(
-			response => response.json()
-		).then(
-			data => this.setState({stories: data})
-		);
+		hnapi()
+			.stories('top')
+			.then(
+				stories => {
+					console.log(stories)
+				}
+			);
 	}
 
 	componentDidUpdate() {
