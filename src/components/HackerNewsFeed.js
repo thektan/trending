@@ -20,22 +20,23 @@ class HackerNewsFeed extends Component {
 	}
 
 	/**
-	* Fetches the stories when the component mounts.
-	*/
-	componentDidMount() {
+	 * Gets the top stories from Hacker News and sets the state.
+	 */
+	getHackerNewsTopStories() {
 		hnapi()
 			.stories('top')
 			.then(
 				(stories) => {
-					console.log(stories);
-
-					this.setState(
-						{
-							stories: stories,
-						}
-					);
+					this.setState({stories: stories});
 				}
 			);
+	}
+
+	/**
+	* Fetches the stories when the component mounts.
+	*/
+	componentDidMount() {
+		this.getHackerNewsTopStories();
 	}
 
 	/**
@@ -51,14 +52,16 @@ class HackerNewsFeed extends Component {
 	* @return {string} Markup of top stories from hacker news.
 	*/
 	render() {
-		const items = this.state.stories.map(
-			(story) => <li>{story.title}</li>
-		);
+		const {stories} = this.state;
 
 		return (
 			<div>
 				<div>Hacker News Feed</div>
-				<ul>{items}</ul>
+				<ul>
+					{stories.map(
+						(story) => <li key={story.id}>{story.title}</li>
+					)}
+				</ul>
 			</div>
 		);
 	}
