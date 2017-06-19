@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint": "^4.0.0",
+    "eslint-config-google": "^0.8.0",
     "firebase-hackernews": "^0.12.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

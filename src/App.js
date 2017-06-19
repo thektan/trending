@@ -1,17 +1,18 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import HackerNewsFeed from './components/HackerNewsFeed';
-import logo from './logo.svg';
 import './App.css';
 
+/**
+ * The main app component with multiple feeds.
+ */
 class App extends Component {
+	/**
+	 * Render the entire application.
+	 * @return {string}
+	 */
 	render() {
 		return (
 			<div className="App">
-				<div className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<h2>Welcome to React</h2>
-				</div>
-
 				<HackerNewsFeed />
 			</div>
 		);
