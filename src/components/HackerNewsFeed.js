@@ -28,6 +28,12 @@ class HackerNewsFeed extends Component {
 			.then(
 				(stories) => {
 					console.log(stories);
+
+					this.setState(
+						{
+							stories: stories,
+						}
+					);
 				}
 			);
 	}
@@ -45,10 +51,14 @@ class HackerNewsFeed extends Component {
 	* @return {string} Markup of top stories from hacker news.
 	*/
 	render() {
+		const items = this.state.stories.map(
+			(story) => <li>{story.title}</li>
+		);
+
 		return (
 			<div>
 				<div>Hacker News Feed</div>
-				<div>{this.state.stories}</div>
+				<ul>{items}</ul>
 			</div>
 		);
 	}
