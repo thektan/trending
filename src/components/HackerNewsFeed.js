@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import hnapi from 'firebase-hackernews';
+import FeedItem from './FeedItem';
 
 /**
  * Component that displays the currently popular Hacker News stories.
@@ -57,9 +58,18 @@ class HackerNewsFeed extends Component {
 		return (
 			<div>
 				<div>Hacker News Feed</div>
+
 				<ul>
 					{stories.map(
-						(story) => <li key={story.id}>{story.title}</li>
+						(story) =>
+							<FeedItem
+								commentCount={story.descendants}
+								date={story.time}
+								key={story.id}
+								score={story.score}
+								title={story.title}
+								url={story.url}
+							/>
 					)}
 				</ul>
 			</div>
