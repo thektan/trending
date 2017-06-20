@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import moment from 'moment';
 
 /**
  * Feed item.
@@ -14,9 +15,7 @@ class FeedItem extends Component {
 	 * @return {string} Formatted date.
 	 */
 	getFormattedDateString(time) {
-		let date = new Date(time);
-
-		return date.toString();
+		return moment(time).fromNow();
 	}
 
 	/**

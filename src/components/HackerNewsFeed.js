@@ -64,7 +64,7 @@ class HackerNewsFeed extends Component {
 						(story) =>
 							<FeedItem
 								commentCount={story.descendants}
-								date={story.time}
+								date={story.time * 1000}
 								key={story.id}
 								score={story.score}
 								title={story.title}
