@@ -35,7 +35,7 @@ class FeedItem extends Component {
 				</a>
 
 				<div className="feed-item-metadata-container">
-					{score} points - {commentCount} comments - {formattedDate}
+					{score} points • {commentCount} comments • {formattedDate}
 				</div>
 			</li>
 		);
