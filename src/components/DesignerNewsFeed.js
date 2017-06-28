@@ -21,17 +21,6 @@ class DesignerNewsFeed extends Component {
 	}
 
 	/**
-	 * Gets the top stories and sets the state.
-	 */
-	getDesignerNewsStories() {
-		fetch('https://www.designernews.co/api/v2/stories')
-			.then((response) => response.json())
-			.then((json) =>
-				this.setState({stories: json.stories})
-			);
-	}
-
-	/**
 	* Fetches the stories when the component mounts.
 	*/
 	componentDidMount() {
@@ -43,6 +32,26 @@ class DesignerNewsFeed extends Component {
 	*/
 	componentDidUpdate() {
 		console.log('designer news component updated', this.state);
+	}
+
+	/**
+	 * Gets the top stories and sets the state.
+	 */
+	getDesignerNewsStories() {
+		fetch('https://www.designernews.co/api/v2/stories')
+			.then((response) => response.json())
+			.then((json) =>
+				this.setState({stories: json.stories})
+			);
+	}
+
+	/**
+	 * Gets the url to the feed site.
+	 * @param {number} id The id of the feed item.
+	 * @return {string} The url to the main feed site.
+	 */
+	getSiteURL(id) {
+		return 'https://www.designernews.co/stories/' + id;
 	}
 
 	/**
@@ -65,6 +74,7 @@ class DesignerNewsFeed extends Component {
 								date={story.created_at}
 								key={story.id}
 								score={story.vote_count}
+								siteUrl={this.getSiteURL(story.id)}
 								title={story.title}
 								url={story.url}
 							/>

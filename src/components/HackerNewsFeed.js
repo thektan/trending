@@ -21,6 +21,20 @@ class HackerNewsFeed extends Component {
 	}
 
 	/**
+	* Fetches the stories when the component mounts.
+	*/
+	componentDidMount() {
+		this.getHackerNewsTopStories();
+	}
+
+	/**
+	* Console if component updates.
+	*/
+	componentDidUpdate() {
+		console.log('component updated', this.state);
+	}
+
+	/**
 	 * Gets the top stories from Hacker News and sets the state.
 	 */
 	getHackerNewsTopStories() {
@@ -34,17 +48,12 @@ class HackerNewsFeed extends Component {
 	}
 
 	/**
-	* Fetches the stories when the component mounts.
-	*/
-	componentDidMount() {
-		this.getHackerNewsTopStories();
-	}
-
-	/**
-	* Console if component updates.
-	*/
-	componentDidUpdate() {
-		console.log('component updated', this.state);
+	 * Gets the url to the feed site.
+	 * @param {number} id The id of the feed item.
+	 * @return {string} The url to the main feed site.
+	 */
+	getSiteURL(id) {
+		return 'https://news.ycombinator.com/item?id=' + id;
 	}
 
 	/**
@@ -67,6 +76,7 @@ class HackerNewsFeed extends Component {
 								date={story.time * 1000}
 								key={story.id}
 								score={story.score}
+								siteUrl={this.getSiteURL(story.id)}
 								title={story.title}
 								url={story.url}
 							/>

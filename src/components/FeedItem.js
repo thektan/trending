@@ -24,13 +24,13 @@ class FeedItem extends Component {
 	 * @return {string} Feed item markup.
 	 */
 	render() {
-		const {commentCount, score, date, title, url} = this.props;
+		const {commentCount, score, date, siteUrl, title, url} = this.props;
 
 		const formattedDate = this.getFormattedDateString(date);
 
 		return (
 			<li className="feed-item-container">
-				<a href={url}>
+				<a href={url || siteUrl}>
 					<span className="feed-item-title">{title}</span>
 				</a>
 
