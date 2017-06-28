@@ -5,7 +5,7 @@ A simple news reader application built on React.
 ## Feeds To Add
 - [x] Hacker News
 - [x] Designer News
-- [ ] witter
+- [ ] Twitter
 - [ ] Medium
 - [ ] Dribbble
 - [ ] Reddit
