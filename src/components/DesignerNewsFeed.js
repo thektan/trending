@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import fetch from 'isomorphic-fetch';
 import FeedItem from './FeedItem';
 import '../css/Feed.css';
 
