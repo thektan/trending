@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import DesignerNewsFeed from './components/DesignerNewsFeed'
+import DesignerNewsFeed from './components/DesignerNewsFeed';
 import HackerNewsFeed from './components/HackerNewsFeed';
 import './App.css';
 
