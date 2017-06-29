@@ -1,14 +1,14 @@
 .feed-item {
-	border-bottom: 1px solid #C8CCD5;
+	border-bottom: 1px solid #DDE6EF;
 	list-style: none;
 }
 
 .feed-item:first-child {
-	border-top: 1px solid #C8CCD5;
+	border-top: 1px solid #DDE6EF;
 }
 
 .feed-item__container {
-	color: #1F2532;
+	color: #0E2B46;
 	display: flex;
 	padding: 10px 0;
 }
@@ -17,12 +17,12 @@
 	color: #1C8AFF;
 	font-size: 13px;
 	font-weight: 600;
+	min-width: 50px;
 	padding-top: 3px;
-	width: 50px;
 }
 
 .feed-item__title {
-	color: #1F2532;
+	color: #0E2B46;
 	font-size: 16px;
 }
 
