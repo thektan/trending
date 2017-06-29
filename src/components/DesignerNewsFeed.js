@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
+
 import FeedItem from './FeedItem';
-import 'whatwg-fetch';
 import '../css/Feed.css';
 
 /**
