@@ -1,0 +1,32 @@
+.feed-item {
+	border-bottom: 1px solid #C8CCD5;
+	list-style: none;
+}
+
+.feed-item:first-child {
+	border-top: 1px solid #C8CCD5;
+}
+
+.feed-item__container {
+	color: #1F2532;
+	display: flex;
+	padding: 10px 0;
+}
+
+.feed-item__score {
+	color: #1C8AFF;
+	font-size: 13px;
+	font-weight: 600;
+	padding-top: 3px;
+	width: 50px;
+}
+
+.feed-item__title {
+	color: #1F2532;
+	font-size: 16px;
+}
+
+.feed-item__metadata, .feed-item__metadata a {
+	color: #7C8795;
+	font-size: 12px;
+}

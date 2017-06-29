@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import moment from 'moment';
+import '../css/FeedItem.css';
 
 /**
  * Feed item.
@@ -29,13 +30,17 @@ class FeedItem extends Component {
 		const formattedDate = this.getFormattedDateString(date);
 
 		return (
-			<li className="feed-item-container">
-				<a href={url || siteUrl}>
-					<span className="feed-item-title">{title}</span>
-				</a>
+			<li className="feed-item">
+				<div className="feed-item__container">
+					<div className="feed-item__score">{score}</div>
 
-				<div className="feed-item-metadata-container">
-					{score} points • {commentCount} comments • {formattedDate}
+					<div className="feed-item__content">
+						<a className="feed-item__title" href={url || siteUrl}>{title}</a>
+
+						<div className="feed-item__metadata">
+							<a href={siteUrl}>{commentCount} comments</a> • {formattedDate}
+						</div>
+					</div>
 				</div>
 			</li>
 		);

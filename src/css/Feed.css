@@ -1,0 +1,13 @@
+.feed__container {
+	margin: 20px;
+}
+
+.feed__content {
+	margin: 0;
+	padding: 0;
+}
+
+.feed__title {
+	font-weight: 600;
+	margin-bottom: 10px;
+}

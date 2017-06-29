@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import FeedItem from './FeedItem';
 import 'whatwg-fetch';
+import '../css/Feed.css';
 
 /**
  * Component that displays the currently popular Designer News posts.
@@ -63,10 +64,10 @@ class DesignerNewsFeed extends Component {
 		const {stories} = this.state;
 
 		return (
-			<div>
-				<div>Designer News Feed</div>
+			<div className="feed__container">
+				<div className="feed__title">Designer News</div>
 
-				<ul>
+				<ul className="feed__content">
 					{stories.map(
 						(story) =>
 							<FeedItem
