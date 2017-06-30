@@ -1,5 +1,6 @@
 .feed__container {
-	margin: 20px;
+	flex: 1;
+	margin: 10px 20px;
 }
 
 .feed__content {
