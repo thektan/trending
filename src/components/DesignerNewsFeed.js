@@ -40,8 +40,8 @@ class DesignerNewsFeed extends Component {
 	 */
 	getDesignerNewsStories() {
 		DNAPI.getStories().then(
-			(json) =>
-				this.setState({stories: json.stories})
+			(data) =>
+				this.setState({stories: data})
 		);
 	}
 

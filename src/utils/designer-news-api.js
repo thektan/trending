@@ -13,10 +13,11 @@ const getSiteStoriesURL = (id) =>
 
 /**
  * Gets the top designer news stories.
- * @return {object} The JSON data.
+ * @return {object} The JSON data of stories.
  */
 const getStories = () =>
 	fetch(`${BASE_URL}stories`)
-		.then((response) => response.json());
+		.then((response) => response.json())
+		.then((data) => data.stories);
 
 export {getSiteStoriesURL, getStories};
