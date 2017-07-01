@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import DesignerNewsFeed from './components/DesignerNewsFeed';
+import DribbbleFeed from './components/DribbbleFeed';
 import HackerNewsFeed from './components/HackerNewsFeed';
 import './css/App.css';
 
@@ -14,9 +15,15 @@ class App extends Component {
 	render() {
 		return (
 			<div className="app">
-				<HackerNewsFeed />
+				<div className="app__section">
+					<DribbbleFeed amount={8} />
+				</div>
 
-				<DesignerNewsFeed />
+				<div className="app__section">
+					<HackerNewsFeed />
+
+					<DesignerNewsFeed />
+				</div>
 			</div>
 		);
 	}

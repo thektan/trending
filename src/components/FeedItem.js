@@ -35,7 +35,11 @@ class FeedItem extends Component {
 					<div className="feed-item__score">{score}</div>
 
 					<div className="feed-item__content">
-						<a className="feed-item__title" href={url || siteUrl}>{title}</a>
+						<a className="feed-item__title-link" href={url || siteUrl}>
+							<span className="feed-item__title">
+								{title}
+							</span>
+						</a>
 
 						<div className="feed-item__metadata">
 							<a href={siteUrl}>{commentCount} comments</a> • {formattedDate}
