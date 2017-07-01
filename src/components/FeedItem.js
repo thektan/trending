@@ -39,6 +39,10 @@ class FeedItem extends Component {
 							<span className="feed-item__title">
 								{title}
 							</span>
+
+							<span className="feed-item__link">
+								({url || siteUrl})
+							</span>
 						</a>
 
 						<div className="feed-item__metadata">

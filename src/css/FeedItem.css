@@ -15,6 +15,15 @@
 	padding: 10px 0;
 }
 
+.feed-item__link {
+	word-break: break-all;
+}
+
+.feed-item__link, .feed-item__metadata, .feed-item__metadata a {
+	color: #7C8795;
+	font-size: 12px;
+}
+
 .feed-item__score {
 	color: #1C8AFF;
 	font-size: 13px;
@@ -28,6 +37,10 @@
 	font-size: 16px;
 }
 
+.feed-item__title + .feed-item__link {
+	margin-left: 5px;
+}
+
 .feed-item__title-link {
 	display: block;
 	line-height: 1.2;
@@ -36,9 +49,4 @@
 
 .feed-item__title-link:hover .feed-item__title {
 	background-color: #BEFFDF;
-}
-
-.feed-item__metadata, .feed-item__metadata a {
-	color: #7C8795;
-	font-size: 12px;
 }
