@@ -65,7 +65,7 @@ class DribbbleFeed extends Component {
 							title={item.title}
 						>
 							<img
-
+								className="image-feed__image"
 								src={item.images.teaser}
 								alt={item.description}
 							/>

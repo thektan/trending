@@ -3,3 +3,15 @@
 	justify-content: space-between;
 	width: 100%;
 }
+
+.image-feed__item {
+	margin-right: 10px;
+}
+
+.image-feed__item:last-child {
+	margin-right: 0;
+}
+
+.image-feed__image {
+	width: 100%;
+}
