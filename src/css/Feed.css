@@ -1,6 +1,10 @@
 .feed__container {
 	flex: 1;
-	margin: 10px 20px;
+	margin-right: 20px;
+}
+
+.feed__container:last-child {
+	margin-right: 0;
 }
 
 .feed__content {

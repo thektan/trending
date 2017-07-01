@@ -10,9 +10,14 @@ a {
 }
 
 .app {
-	margin: 20px;
+	margin: 10px 20px;
 }
 
 .app__section {
 	display: flex;
+	margin-bottom: 10px;
+}
+
+.app__section:last-child {
+	margin-bottom: 0;
 }
