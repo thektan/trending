@@ -7,7 +7,7 @@ A simple news reader application built on React.
 - [x] Designer News
 - [ ] Twitter
 - [ ] Medium
-- [ ] Dribbble
+- [x] Dribbble
 - [ ] Reddit
 
 ### References
