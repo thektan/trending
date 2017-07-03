@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import weather from 'yahoo-weather';
 import '../css/Weather.css';
 
@@ -17,7 +18,7 @@ class Weather extends Component {
 
 		this.state = {
 			temperature: 0,
-			units: 'F',
+			units: 'f',
 		};
 	}
 
@@ -25,16 +26,16 @@ class Weather extends Component {
 	 * Sets the weather after the component mounts.
 	 */
 	componentDidMount() {
-		this.getWeather('Diamond Bar, CA', 'F');
+		this.getWeather(this.props.location, this.props.unit);
 	}
 
 	/**
 	 * Gets the weather of a specific location.
 	 * @param {string} location The location where to get the weather of.
-	 * @param {string} [units='F']  Either 'C' or 'F'. Defaults to 'F'.
+	 * @param {string} [unit='f']  Either 'c' or 'f'. Defaults to 'f'.
 	 */
-	getWeather(location, units='F') {
-		weather(location, units).then(
+	getWeather(location, unit='f') {
+		weather(location, unit).then(
 			(info) => {
 				this.setState({temperature: info.item.condition.temp});
 			}
@@ -54,5 +55,20 @@ class Weather extends Component {
 		);
 	}
 }
+
+Weather.propTypes = {
+	location: PropTypes.string,
+
+	unit: (props, propName, componentName) => {
+		const value = props[propName].toLowerCase();
+
+		if (value !== 'c' && value !== 'f') {
+			return new Error(
+				'Invalid prop `' + propName + '` supplied to' +
+				' `' + componentName + '`. Validation failed.'
+			);
+		}
+	},
+};
 
 export default Weather;

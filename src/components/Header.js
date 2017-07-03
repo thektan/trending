@@ -22,7 +22,10 @@ class Header extends Component {
 					Good Morning!
 				</span>
 
-				<Weather />
+				<Weather
+					location='Diamond Bar, CA'
+					unit='f'
+				/>
 			</div>
 		);
 	}
