@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Weather from './Weather';
 import '../css/Header.css';
 
 /**
@@ -20,6 +21,8 @@ class Header extends Component {
 				<span className="header__message">
 					Good Morning!
 				</span>
+
+				<Weather />
 			</div>
 		);
 	}

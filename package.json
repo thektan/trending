@@ -6,7 +6,8 @@
     "firebase-hackernews": "^0.12.3",
     "moment": "^2.18.1",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "weather-js": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^4.0.0",
