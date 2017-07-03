@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import moment from 'moment';
-import uri from 'urijs';
+import URI from 'urijs';
 import '../css/FeedItem.css';
 
 /**
@@ -26,7 +26,13 @@ class FeedItem extends Component {
 	 * @return {string} The extracted name.
 	 */
 	getURLDomainName(url) {
-		return uri(url).hostname();
+		let uri = new URI(url);
+
+		if (uri.scheme() === '') {
+			uri = new URI('http://' + url);
+		}
+
+		return uri.hostname();
 	}
 
 	/**
