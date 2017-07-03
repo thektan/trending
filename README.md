@@ -21,3 +21,4 @@ A simple news reader application built on React.
 - https://daveceddia.com/where-fetch-data-componentwillmount-vs-componentdidmount/
 - https://www.npmjs.com/package/firebase-hackernews
 - http://developer.dribbble.com/v1/
+- https://github.com/motdotla/dotenv
