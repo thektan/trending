@@ -6,7 +6,8 @@
     "firebase-hackernews": "^0.12.3",
     "mockdate": "^2.0.1",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "yahoo-weather": "^2.2.2"
   },
   "devDependencies": {
     "enzyme": "^2.9.1",

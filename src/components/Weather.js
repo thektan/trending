@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import weather from 'yahoo-weather';
 import '../css/Weather.css';
 
 /**
@@ -8,20 +9,36 @@ import '../css/Weather.css';
  * @extends {Component}
  */
 class Weather extends Component {
+	/**
+	 * Constructs the weather component and sets up the state with defaults.
+	 */
 	constructor() {
 		super();
 
 		this.state = {
-			weather: 0,
+			temperature: 0,
+			units: 'F',
 		};
 	}
 
+	/**
+	 * Sets the weather after the component mounts.
+	 */
 	componentDidMount() {
-		this.getWeather();
+		this.getWeather('Diamond Bar, CA', 'F');
 	}
 
-	getWeather() {
-
+	/**
+	 * Gets the weather of a specific location.
+	 * @param {string} location The location where to get the weather of.
+	 * @param {string} [units='F']  Either 'C' or 'F'. Defaults to 'F'.
+	 */
+	getWeather(location, units='F') {
+		weather(location, units).then(
+			(info) => {
+				this.setState({temperature: info.item.condition.temp});
+			}
+		);
 	}
 
 	/**
@@ -31,9 +48,9 @@ class Weather extends Component {
 	 */
 	render() {
 		return (
-			<div className="weather">
-
-			</div>
+			<span className="weather">
+				{this.state.temperature}&deg;{this.state.units}
+			</span>
 		);
 	}
 }

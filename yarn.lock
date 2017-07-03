@@ -3320,7 +3320,7 @@ isobject@^2.0.0:
   dependencies:
     isarray "1.0.0"
 
-isomorphic-fetch@^2.1.1:
+isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   dependencies:
@@ -6449,6 +6449,12 @@ xmlhttprequest@^1.8.0:
 y18n@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
+
+yahoo-weather@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/yahoo-weather/-/yahoo-weather-2.2.2.tgz#5a5c9c405d6c4b32b21ed55c473f316094df3b86"
+  dependencies:
+    isomorphic-fetch "^2.2.1"
 
 yallist@^2.0.0:
   version "2.1.2"
