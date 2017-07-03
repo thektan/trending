@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import weather from 'weather-js';
 import '../css/Weather.css';
 
 /**
@@ -22,19 +21,7 @@ class Weather extends Component {
 	}
 
 	getWeather() {
-		weather.find(
-			{
-				search: 'San Francisco, CA',
-				degreeType: 'F',
-			},
-			(err, result) => {
-				if (err) console.log(err);
 
-				console.log(JSON.stringify(result, null, 2));
-
-				this.setState({weather: 0});
-			}
-		);
 	}
 
 	/**
