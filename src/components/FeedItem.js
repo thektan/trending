@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import moment from 'moment';
+import uri from 'urijs';
 import '../css/FeedItem.css';
 
 /**
@@ -17,6 +18,15 @@ class FeedItem extends Component {
 	 */
 	getFormattedDateString(time) {
 		return moment(time).fromNow();
+	}
+
+	/**
+	 * Extracts the subdomain and domain name of a url.
+	 * @param {string} url The url to extract from.
+	 * @return {string} The extracted name.
+	 */
+	getURLDomainName(url) {
+		return uri(url).hostname();
 	}
 
 	/**
@@ -41,7 +51,7 @@ class FeedItem extends Component {
 							</span>
 
 							<span className="feed-item__link">
-								({url || siteUrl})
+								({this.getURLDomainName(url || siteUrl)})
 							</span>
 						</a>
 
