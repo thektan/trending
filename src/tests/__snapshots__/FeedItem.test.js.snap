@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedItem renders 1`] = `
+<li
+  className="feed-item"
+>
+  <div
+    className="feed-item__container"
+  >
+    <div
+      className="feed-item__score"
+    >
+      1
+    </div>
+    <div
+      className="feed-item__content"
+    >
+      <a
+        className="feed-item__title-link"
+        href="https://testurl.com"
+      >
+        <span
+          className="feed-item__title"
+        >
+          Test Title
+        </span>
+        <span
+          className="feed-item__link"
+        >
+          (
+          testurl.com
+          )
+        </span>
+      </a>
+      <div
+        className="feed-item__metadata"
+      >
+        <a
+          href="https://testurl.com"
+        >
+          1
+           comments
+        </a>
+         • 
+        4 hours ago
+      </div>
+    </div>
+  </div>
+</li>
+`;

@@ -22,3 +22,7 @@ A simple news reader application built on React.
 - https://www.npmjs.com/package/firebase-hackernews
 - http://developer.dribbble.com/v1/
 - https://github.com/motdotla/dotenv
+- Testing performance of regex to parse urls: https://jsperf.com/url-parsing-regex-vs-createelement
+
+Testing with Jest:
+- https://facebook.github.io/jest/
