@@ -1,10 +1,9 @@
+![trending logo](trending-logo-full.png)
+![trending screenshot](trending-screenshot.png)
+
 # Trending
 
-![trending logo](trending-logo-full.png)
-
 A simple news reader application built on React. *Work in progress.*
-
-![trending screenshot](trending-screenshot.png)
 
 ## Feeds To Add
 - [x] Hacker News
