@@ -10,12 +10,13 @@ a {
 }
 
 .app {
-	margin: 10px 20px;
+	margin: 0 auto;
+	padding: 10px 40px;
 }
 
 .app__section {
 	display: flex;
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 }
 
 .app__section:last-child {
