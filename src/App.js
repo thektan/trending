@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
-import DesignerNewsFeed from './components/DesignerNewsFeed';
-import DribbbleFeed from './components/DribbbleFeed';
-import HackerNewsFeed from './components/HackerNewsFeed';
+
 import Header from './components/Header';
+
+import DribbbleFeed from './components/DribbbleFeed';
+import DesignerNewsFeed from './components/DesignerNewsFeed';
+import HackerNewsFeed from './components/HackerNewsFeed';
+import NewsFeed from './components/NewsFeed';
+
 import './css/App.css';
 
 /**
@@ -28,6 +32,8 @@ class App extends Component {
 					<HackerNewsFeed />
 
 					<DesignerNewsFeed />
+
+					<NewsFeed />
 				</div>
 			</div>
 		);
