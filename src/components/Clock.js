@@ -8,21 +8,36 @@ import moment from 'moment';
  * @extends {Component}
  */
 class Clock extends Component {
-	constructor() {
-		super();
+	/**
+	 * Setup for the clock.
+	 * @param {Object} props
+	 */
+	constructor(props) {
+		super(props);
 
 		this.state = {
-			date: moment().format('LTS')
+			date: moment().format(props.format),
 		};
 	}
 
+	/**
+	 * Updates the time to the current time with the format passed
+	 * from the component prop.
+	 */
+	updateTime() {
+		this.setState(
+			(prevState, props) => ({
+				date: moment().format(props.format),
+			})
+		);
+	}
+
+	/**
+	 * Sets the interval when the component mounts.
+	 */
 	componentDidMount() {
 		setInterval(
-			() => {
-				this.setState({
-					date: moment().format('LTS')
-				});
-			},
+			() => this.updateTime(),
 			1000
 		);
 	}

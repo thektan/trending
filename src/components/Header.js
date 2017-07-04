@@ -23,7 +23,7 @@ class Header extends Component {
 					Good Morning!
 				</span>
 
-				<Clock />
+				<Clock format="LTS" />
 
 				<Weather
 					location='Diamond Bar, CA'
