@@ -50,3 +50,7 @@
 .feed-item__title-link:hover .feed-item__title {
 	background-color: #BEFFDF;
 }
+
+.feed-item__title-link:visited .feed-item__title {
+	color: #BCC3CC;
+}
