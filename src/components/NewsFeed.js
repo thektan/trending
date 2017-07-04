@@ -61,7 +61,7 @@ class NewsFeed extends Component {
 								commentCount={item.comment_count}
 								date={item.publishedAt}
 								key={index}
-								score={index}
+								score={index + 1}
 								siteUrl=""
 								title={item.title}
 								url={item.url}
