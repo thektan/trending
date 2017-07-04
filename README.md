@@ -1,4 +1,6 @@
 # Trending
+![trending logo](trending-logo-full.png)
+![trending screenshot](trending-screenshot.png)
 
 A simple news reader application built on React.
 
