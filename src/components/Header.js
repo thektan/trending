@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Clock from './Clock';
+import Greeting from './Greeting';
 import Weather from './Weather';
 import '../css/Header.css';
 
@@ -19,9 +20,7 @@ class Header extends Component {
 	render() {
 		return (
 			<div className="header">
-				<span className="header__message">
-					Good Morning!
-				</span>
+				<Greeting />
 
 				<Clock format="LTS" />
 
