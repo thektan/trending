@@ -58,7 +58,6 @@ class NewsFeed extends Component {
 					{items.map(
 						(item, index) =>
 							<FeedItem
-								commentCount={item.comment_count}
 								date={item.publishedAt}
 								key={index}
 								score={index + 1}
