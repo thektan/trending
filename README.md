@@ -1,4 +1,4 @@
-![trending logo](trending-logo-full.png)
+![trending logo](trending-logo-full-v2.png)
 ![trending screenshot](trending-screenshot.png)
 
 # Trending
