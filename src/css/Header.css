@@ -4,3 +4,15 @@
 	justify-content: space-between;
 	width: 100%;
 }
+
+.header__section {
+	flex: 1;
+}
+
+.header__section--center {
+	text-align: center;
+}
+
+.header__section--right {
+	text-align: right;
+}

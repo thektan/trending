@@ -20,14 +20,20 @@ class Header extends Component {
 	render() {
 		return (
 			<div className="header">
-				<Greeting />
+				<div className="header__section">
+					<Greeting />
+				</div>
 
-				<Clock format="LTS" />
+				<div className="header__section header__section--center">
+					<Clock format="LTS" />
+				</div>
 
-				<Weather
-					location='Diamond Bar, CA'
-					unit='f'
-				/>
+				<div className="header__section header__section--right">
+					<Weather
+						location='Diamond Bar, CA'
+						unit='f'
+					/>
+				</div>
 			</div>
 		);
 	}
