@@ -62,7 +62,9 @@ class FeedItem extends Component {
 						</a>
 
 						<div className="feed-item__metadata">
-							<a href={siteUrl}>{commentCount >= 0 ? commentCount + ' comments •' : ''}</a> {formattedDate}
+							<a href={siteUrl}>
+								{commentCount >= 0 ? commentCount + ' comments •' : ''}
+							</a> {formattedDate}
 						</div>
 					</div>
 				</div>

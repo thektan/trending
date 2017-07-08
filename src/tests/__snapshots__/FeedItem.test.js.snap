@@ -38,10 +38,9 @@ exports[`FeedItem renders 1`] = `
         <a
           href="https://testurl.com"
         >
-          1
-           comments
+          1 comments •
         </a>
-         • 
+         
         4 hours ago
       </div>
     </div>
