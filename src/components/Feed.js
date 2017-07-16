@@ -3,7 +3,7 @@ import FeedItem from './FeedItem';
 import '../css/Feed.css';
 
 /**
- * Component that displays the currently popular Hacker News stories.
+ * Component that displays a feed of stories.
  *
  * @class Feed
  * @extends {Component}

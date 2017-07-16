@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Feed from './Feed';
+import * as DesignerNewsUtil from '../utils/designer-news-util';
 import * as HackerNewsUtil from '../utils/hacker-news-util';
 
 /**
@@ -24,13 +25,25 @@ class StoryFeed extends Component {
 	* Fetches the stories when the component mounts.
 	*/
 	componentDidMount() {
-		HackerNewsUtil.getHackerNewsTopStories().then(
+		HackerNewsUtil.getTopStories().then(
 			(stories) => {
 				this.setState((prevState, props) => {
-					let formattedStories = HackerNewsUtil.formatHackerNewsStories(stories);
+					let formattedStories = HackerNewsUtil.formatStories(stories);
 
 					return {
-						stories: prevState.stories.concat(formattedStories)
+						stories: prevState.stories.concat(formattedStories),
+					};
+				});
+			}
+		);
+
+		DesignerNewsUtil.getStories().then(
+			(stories) => {
+				this.setState((prevState, props) => {
+					let formattedStories = DesignerNewsUtil.formatStories(stories);
+
+					return {
+						stories: prevState.stories.concat(formattedStories),
 					};
 				});
 			}

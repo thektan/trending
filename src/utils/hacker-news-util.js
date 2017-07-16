@@ -9,7 +9,7 @@ const SOURCE_NAME = 'Hacker News';
  * @param  {object} data The data to format from the api.
  * @return {object} Formatted data.
  */
-const formatHackerNewsStories = (data) => {
+const formatStories = (data) => {
 	return data.map(
 		(story) => {
 			return {
@@ -30,7 +30,7 @@ const formatHackerNewsStories = (data) => {
  * Gets the top stories from Hacker News.
  * @return {Promise} Hacker news top stories.
  */
-const getHackerNewsTopStories = () => {
+const getTopStories = () => {
 	return hnapi().stories('top');
 };
 
@@ -44,6 +44,6 @@ const getSiteURL = (id) => {
 };
 
 export {
-	formatHackerNewsStories,
-	getHackerNewsTopStories,
+	formatStories,
+	getTopStories,
 };
