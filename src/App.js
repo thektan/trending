@@ -3,9 +3,7 @@ import React, {Component} from 'react';
 import Header from './components/Header';
 
 import DribbbleFeed from './components/DribbbleFeed';
-import DesignerNewsFeed from './components/DesignerNewsFeed';
-import HackerNewsFeed from './components/HackerNewsFeed';
-import NewsFeed from './components/NewsFeed';
+import StoryFeed from './components/StoryFeed';
 
 import './css/App.css';
 
@@ -29,11 +27,7 @@ class App extends Component {
 				</div>
 
 				<div className="app__section">
-					<HackerNewsFeed />
-
-					<DesignerNewsFeed />
-
-					<NewsFeed />
+					<StoryFeed />
 				</div>
 			</div>
 		);
