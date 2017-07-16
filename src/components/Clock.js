@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import moment from 'moment';
+import '../css/Clock.css';
 
 /**
  * Displays the current time.
