@@ -1,5 +1,6 @@
 import hnapi from 'firebase-hackernews';
 
+const BASE_SITE_URL = 'https://news.ycombinator.com/';
 const SOURCE_NAME = 'Hacker News';
 
 /**
@@ -11,28 +12,27 @@ const SOURCE_NAME = 'Hacker News';
 const formatHackerNewsStories = (data) => {
 	return data.map(
 		(story) => {
-			let formattedItem = {};
-
-			formattedItem.commentCount = story.descendants;
-			formattedItem.date = story.time * 1000;
-			formattedItem.id = story.id;
-			formattedItem.score = story.score;
-			formattedItem.sourceName = SOURCE_NAME;
-			formattedItem.sourceUrl = getSiteURL(story.id);
-			formattedItem.storyUrl = story.url;
-			formattedItem.title = story.title;
-
-			return formattedItem;
+			return {
+				commentCount: story.descendants,
+				date: story.time * 1000,
+				id: story.id,
+				score: story.score,
+				sourceName: SOURCE_NAME,
+				sourceUrl: getSiteURL(story.id),
+				storyUrl: story.url,
+				title: story.title,
+			};
 		}
 	);
-}
+};
 
 /**
- * Gets the top stories from Hacker News and sets the state.
+ * Gets the top stories from Hacker News.
+ * @return {Promise} Hacker news top stories.
  */
 const getHackerNewsTopStories = () => {
 	return hnapi().stories('top');
-}
+};
 
 /**
  * Gets the url to the feed site.
@@ -40,8 +40,8 @@ const getHackerNewsTopStories = () => {
  * @return {string} The url to the main feed site.
  */
 const getSiteURL = (id) => {
-	return 'https://news.ycombinator.com/item?id=' + id;
-}
+	return `${BASE_SITE_URL}item?id=${id}`;
+};
 
 export {
 	formatHackerNewsStories,

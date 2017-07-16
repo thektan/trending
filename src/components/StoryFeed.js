@@ -10,7 +10,7 @@ import * as HackerNewsUtil from '../utils/hacker-news-util';
  */
 class StoryFeed extends Component {
 	/**
-	* Creates an instance of HackerNewsFeed.
+	* Creates an instance of the StoryFeed.
 	*/
 	constructor() {
 		super();
@@ -26,8 +26,12 @@ class StoryFeed extends Component {
 	componentDidMount() {
 		HackerNewsUtil.getHackerNewsTopStories().then(
 			(stories) => {
-				this.setState({
-					stories: HackerNewsUtil.formatHackerNewsStories(stories)
+				this.setState((prevState, props) => {
+					let formattedStories = HackerNewsUtil.formatHackerNewsStories(stories);
+
+					return {
+						stories: prevState.stories.concat(formattedStories)
+					};
 				});
 			}
 		);
@@ -43,11 +47,9 @@ class StoryFeed extends Component {
 	/**
 	* Render the component.
 	*
-	* @return {string} Markup of top stories from hacker news.
+	* @return {string} Markup of stories.
 	*/
 	render() {
-		const {stories} = this.state;
-
 		return (
 			<div className="story-feed">
 				<Feed stories={this.state.stories} />

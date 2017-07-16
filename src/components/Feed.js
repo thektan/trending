@@ -27,10 +27,10 @@ class Feed extends Component {
 								date={story.date}
 								key={story.id}
 								score={story.score}
-								siteUrl={story.storyUrl}
+								siteUrl={story.sourceUrl}
 								sourceName={story.sourceName}
 								title={story.title}
-								url={story.sourceUrl}
+								url={story.storyUrl}
 							/>
 					)}
 				</ul>
