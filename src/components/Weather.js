@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import weather from 'yahoo-weather';
 import '../css/Weather.css';
 
 /**
@@ -11,54 +9,20 @@ import '../css/Weather.css';
  */
 class Weather extends Component {
 	/**
-	 * Constructs the weather component and sets up the state with defaults.
-	 */
-	constructor() {
-		super();
-
-		this.state = {
-			temperature: 0,
-			units: 'f',
-		};
-	}
-
-	/**
-	 * Sets the weather after the component mounts.
-	 */
-	componentDidMount() {
-		this.getWeather(this.props.location, this.props.unit);
-	}
-
-	/**
-	 * Gets the weather of a specific location.
-	 * @param {string} location The location where to get the weather of.
-	 * @param {string} [unit='f']  Either 'c' or 'f'. Defaults to 'f'.
-	 */
-	getWeather(location, unit='f') {
-		weather(location, unit).then(
-			(info) => {
-				this.setState({temperature: info.item.condition.temp});
-			}
-		);
-	}
-
-	/**
-	 * Renders a list item of a feed.
+	 * Renders the current temperature.
 	 *
-	 * @return {string} Feed item markup.
+	 * @return {string}
 	 */
 	render() {
 		return (
 			<span className="weather">
-				{this.state.temperature}&deg;{this.state.units}
+				{this.props.temperature}&deg;{this.props.unit}
 			</span>
 		);
 	}
 }
 
 Weather.propTypes = {
-	location: PropTypes.string,
-
 	unit: (props, propName, componentName) => {
 		const value = props[propName].toLowerCase();
 
