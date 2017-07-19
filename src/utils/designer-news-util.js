@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch';
 
-const BASE_URL = 'https://www.designernews.co/api/v2/';
-const BASE_SITE_URL = 'https://www.designernews.co/';
+const BASE_URL = 'https://www.designernews.co/api/v2';
+const BASE_SITE_URL = 'https://www.designernews.co';
 const SOURCE_NAME = 'Designer News';
 
 /**
@@ -15,6 +15,7 @@ const formatStories = (data) => {
 		(story) => {
 			return {
 				commentCount: story.comment_count,
+				comments: story.links.comments,
 				date: story.created_at,
 				id: story.id,
 				score: story.vote_count,
@@ -27,6 +28,11 @@ const formatStories = (data) => {
 	);
 };
 
+const getComment = (id) => {
+	return fetch(`${BASE_URL}/comments/${id}`)
+		.then((response) => response.json())
+		.then((data) => data.comments[0].body_html);
+};
 
 /**
  * Gets the url to the feed site in the format /stories/{id}.
@@ -34,15 +40,20 @@ const formatStories = (data) => {
  * @return {string} The url to the main feed site.
  */
 const getSiteURL = (id) =>
-	`${BASE_SITE_URL}stories/${id}`;
+	`${BASE_SITE_URL}/stories/${id}`;
 
 /**
  * Gets the top designer news stories.
  * @return {object} The JSON data of stories.
  */
 const getStories = () =>
-	fetch(`${BASE_URL}stories`)
+	fetch(`${BASE_URL}/stories`)
 		.then((response) => response.json())
 		.then((data) => data.stories);
 
-export {formatStories, getStories};
+export {
+	SOURCE_NAME,
+	formatStories,
+	getComment,
+	getStories,
+};

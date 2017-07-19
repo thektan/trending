@@ -26,6 +26,12 @@ const formatStories = (data) => {
 	);
 };
 
+const getComments = (id) => {
+	console.log(id);
+
+	return id;
+};
+
 /**
  * Gets the top stories from Hacker News.
  * @return {Promise} Hacker news top stories.
@@ -44,6 +50,8 @@ const getSiteURL = (id) => {
 };
 
 export {
+	SOURCE_NAME,
 	formatStories,
+	getComments,
 	getTopStories,
 };

@@ -24,8 +24,10 @@ class Feed extends Component {
 						(story) =>
 							<FeedItem
 								commentCount={story.commentCount}
+								comments={story.comments}
 								date={story.date}
 								key={story.id}
+								id={story.id}
 								score={story.score}
 								siteUrl={story.sourceUrl}
 								sourceName={story.sourceName}
