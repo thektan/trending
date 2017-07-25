@@ -3,6 +3,8 @@
 
 # Trending
 
+[![Build Status](https://travis-ci.org/thektan/trending.svg?branch=master)](https://travis-ci.org/thektan/trending)
+
 A simple news reader application built on React. *Work in progress.*
 
 ## Feeds To Add
