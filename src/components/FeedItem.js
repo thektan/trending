@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import moment from 'moment';
 import URI from 'urijs';
-import CommentPopup from './CommentPopup';
 import '../css/FeedItem.css';
 
 /**
@@ -11,34 +10,6 @@ import '../css/FeedItem.css';
  * @extends {Component}
  */
 class FeedItem extends Component {
-	/**
-	 * Initializes the state.
-	 */
-	constructor() {
-		super();
-
-		this.handleCommentClose = this.handleCommentClose.bind(this);
-
-		this.state = {
-			showComments: false,
-		};
-	}
-
-	/**
-	 * When the comment count is clicked, show the popup to display the
-	 * comments by setting the visibility to true.
-	 */
-	handleCommentOpen() {
-		this.setState({showComments: true});
-	}
-
-	/**
-	 * Hide comment.
-	 */
-	handleCommentClose() {
-		this.setState({showComments: false});
-	}
-
 	/**
 	 * Converts a timestamp into a formatted date.
 	 *
@@ -70,29 +41,13 @@ class FeedItem extends Component {
 	 * @return {string} Feed item markup.
 	 */
 	render() {
-		const {
-			commentCount,
-			comments,
-			score,
-			date,
-			siteUrl,
-			sourceName,
-			title,
-			url,
-		} = this.props;
+		const {commentCount, score, date, siteUrl, title, url} = this.props;
 
 		const formattedDate = this.getFormattedDateString(date);
 
 		return (
 			<li className="feed-item">
 				<div className="feed-item__container">
-					<CommentPopup
-						handleClose={this.handleCommentClose}
-						comments={comments}
-						sourceName={sourceName}
-						isOpen={this.state.showComments}
-					/>
-
 					<div className="feed-item__score">{score}</div>
 
 					<div className="feed-item__content">
@@ -107,13 +62,7 @@ class FeedItem extends Component {
 						</a>
 
 						<div className="feed-item__metadata">
-							<a
-								href={siteUrl}
-								onClick={(event) => {
-									event.preventDefault();
-									this.handleCommentOpen();
-								}}
-							>
+							<a href={siteUrl}>
 								{commentCount >= 0 ? commentCount + ' comments •' : ''}
 							</a> {formattedDate}
 						</div>
