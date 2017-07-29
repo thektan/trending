@@ -8,19 +8,6 @@ exports[`FeedItem renders 1`] = `
     className="feed-item__container"
   >
     <div
-      className="comment-popup "
-    >
-      <span
-        className="comment-popup__close-icon"
-        onClick={[Function]}
-      >
-        x
-      </span>
-      <div
-        className="comment-popup__body"
-      />
-    </div>
-    <div
       className="feed-item__score"
     >
       1
@@ -50,7 +37,6 @@ exports[`FeedItem renders 1`] = `
       >
         <a
           href="https://testurl.com"
-          onClick={[Function]}
         >
           1 comments •
         </a>
