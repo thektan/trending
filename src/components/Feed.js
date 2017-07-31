@@ -15,10 +15,12 @@ class Feed extends Component {
 	* @return {string} Markup of top stories from hacker news.
 	*/
 	render() {
-		const {stories} = this.props;
+		const {header, stories} = this.props;
 
 		return (
 			<div className="feed__container">
+				<h2 className="feed__header">{header}</h2>
+
 				<ul className="feed__content">
 					{stories.map(
 						(story) =>

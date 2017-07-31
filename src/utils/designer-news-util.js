@@ -45,4 +45,8 @@ const getStories = () =>
 		.then((response) => response.json())
 		.then((data) => data.stories);
 
-export {formatStories, getStories};
+export {
+	formatStories,
+	getStories,
+	SOURCE_NAME,
+};

@@ -17,7 +17,8 @@ class StoryFeed extends Component {
 		super();
 
 		this.state = {
-			stories: [],
+			designerNewsStories: [],
+			hackerNewsStories: [],
 		};
 	}
 
@@ -31,7 +32,7 @@ class StoryFeed extends Component {
 					let formattedStories = HackerNewsUtil.formatStories(stories);
 
 					return {
-						stories: prevState.stories.concat(formattedStories),
+						hackerNewsStories: formattedStories,
 					};
 				});
 			}
@@ -43,7 +44,7 @@ class StoryFeed extends Component {
 					let formattedStories = DesignerNewsUtil.formatStories(stories);
 
 					return {
-						stories: prevState.stories.concat(formattedStories),
+						designerNewsStories: formattedStories,
 					};
 				});
 			}
@@ -65,7 +66,15 @@ class StoryFeed extends Component {
 	render() {
 		return (
 			<div className="story-feed">
-				<Feed stories={this.state.stories} />
+				<Feed
+					header={HackerNewsUtil.SOURCE_NAME}
+					stories={this.state.hackerNewsStories}
+				/>
+
+				<Feed
+					header={DesignerNewsUtil.SOURCE_NAME}
+					stories={this.state.designerNewsStories}
+				/>
 			</div>
 		);
 	}

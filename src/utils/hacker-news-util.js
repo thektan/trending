@@ -46,4 +46,5 @@ const getSiteURL = (id) => {
 export {
 	formatStories,
 	getTopStories,
+	SOURCE_NAME,
 };
