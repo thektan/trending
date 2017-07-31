@@ -36,12 +36,13 @@ class Greeting extends Component {
 
 		let greeting;
 
-		if (currentHour >= 3 && currentHour < 12)
+		if (currentHour >= 3 && currentHour < 12) {
 			greeting = GREETING_MESSAGES.MORNING;
-		else if (currentHour >= 12 && currentHour < 18)
+		} else if (currentHour >= 12 && currentHour < 18) {
 			greeting = GREETING_MESSAGES.AFTERNOON;
-		else
+		} else {
 			greeting = GREETING_MESSAGES.EVENING;
+		}
 
 		return greeting;
 	}
@@ -53,7 +54,7 @@ class Greeting extends Component {
 		let greetingMessage = this.getGreeting();
 
 		this.setState({
-			message: greetingMessage
+			message: greetingMessage,
 		});
 	}
 
