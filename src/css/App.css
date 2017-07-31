@@ -22,3 +22,12 @@ a {
 .app__section:last-child {
 	margin-bottom: 0;
 }
+
+.app__column.app__column--left {
+	min-width: 400px;
+	width: 400px;
+}
+
+.app__column.app__column--right {
+	flex: 1;
+}

@@ -23,11 +23,13 @@ class App extends Component {
 				</div>
 
 				<div className="app__section">
-					<DribbbleFeed amount={8} />
-				</div>
+					<div className="app__column app__column--left">
+						<DribbbleFeed amount={12} />
+					</div>
 
-				<div className="app__section">
-					<StoryFeed />
+					<div className="app__column app__column--right">
+						<StoryFeed />
+					</div>
 				</div>
 			</div>
 		);

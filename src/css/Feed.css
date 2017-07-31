@@ -1,7 +1,4 @@
 .feed__container {
-	column-count: 4;
-	column-gap: 40px;
-	flex: 1;
 	margin-right: 20px;
 }
 
@@ -10,6 +7,8 @@
 }
 
 .feed__content {
+	display: flex;
+	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 }

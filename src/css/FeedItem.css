@@ -2,6 +2,7 @@
 
 .feed-item {
 	list-style: none;
+	width: 33%;
 }
 
 .feed-item__container {
