@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import moment from 'moment';
-import URI from 'urijs';
 import '../css/FeedItem.css';
+import {getFormattedDateString, getURLDomainName} from '../utils/util';
 
 /**
  * Feed item.
@@ -11,31 +10,6 @@ import '../css/FeedItem.css';
  */
 class FeedItem extends Component {
 	/**
-	 * Converts a timestamp into a formatted date.
-	 *
-	 * @param {string|number} time
-	 * @return {string} Formatted date.
-	 */
-	getFormattedDateString(time) {
-		return moment(time).fromNow();
-	}
-
-	/**
-	 * Extracts the subdomain and domain name of a url.
-	 * @param {string} url The url to extract from.
-	 * @return {string} The extracted name.
-	 */
-	getURLDomainName(url) {
-		let uri = new URI(url);
-
-		if (uri.scheme() === '') {
-			uri = new URI('http://' + url);
-		}
-
-		return uri.hostname();
-	}
-
-	/**
 	 * Renders a list item of a feed.
 	 *
 	 * @return {string} Feed item markup.
@@ -43,7 +17,7 @@ class FeedItem extends Component {
 	render() {
 		const {commentCount, score, date, siteUrl, title, url} = this.props;
 
-		const formattedDate = this.getFormattedDateString(date);
+		const formattedDate = getFormattedDateString(date);
 
 		return (
 			<li className="feed-item">
@@ -57,7 +31,7 @@ class FeedItem extends Component {
 							</span>
 
 							<span className="feed-item__link">
-								({this.getURLDomainName(url || siteUrl)})
+								({getURLDomainName(url || siteUrl)})
 							</span>
 						</a>
 

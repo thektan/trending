@@ -28,7 +28,7 @@ class App extends Component {
 					</div>
 
 					<div className="app__column app__column--right">
-						<StoryFeed />
+						<StoryFeed amount={9} />
 					</div>
 				</div>
 			</div>

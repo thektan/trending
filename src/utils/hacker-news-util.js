@@ -39,6 +39,8 @@ const getTopStories = (page = 1, count = 30) => {
 			count: count,
 			page: page,
 		}
+	).then(
+		(stories) => formatStories(stories)
 	);
 };
 
@@ -52,7 +54,6 @@ const getSiteURL = (id) => {
 };
 
 export {
-	formatStories,
 	getTopStories,
 	SOURCE_NAME,
 };
