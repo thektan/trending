@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
+import FeatureStory from './FeatureStory';
 import Feed from './Feed';
 import * as DesignerNewsUtil from '../utils/designer-news-util';
 import * as HackerNewsUtil from '../utils/hacker-news-util';
-import {getFormattedDateString, getURLDomainName} from '../utils/util';
 
 /**
  * Displays a list of stories.
@@ -106,31 +106,9 @@ class StoryFeed extends Component {
 	* @return {string} Markup of stories.
 	*/
 	render() {
-		const {featureStory} = this.state;
-
 		return (
 			<div className="story-feed">
-				<div className="feature-story">
-					<h1 className="feature-story__title">
-						{featureStory.title}
-
-						<span className="feature-story__score">
-							{featureStory.score}
-						</span>
-					</h1>
-
-					<div className="feature-story__link">
-						({getURLDomainName(featureStory.storyUrl
-							|| featureStory.sourceUrl)})
-					</div>
-
-					<div className="feature-story__metadata">
-						<a href={featureStory.sourceUrl}>
-							{featureStory.commentCount >= 0 ?
-								featureStory.commentCount + ' comments •' : ''}
-						</a> {getFormattedDateString(featureStory.date)}
-					</div>
-				</div>
+				<FeatureStory story={this.state.featureStory} />
 
 				<Feed
 					header={HackerNewsUtil.SOURCE_NAME}

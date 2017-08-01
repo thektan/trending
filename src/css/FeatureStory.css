@@ -1,0 +1,26 @@
+.feature-story {
+	margin: 20px 0 40px 0;
+}
+
+.feature-story__title {
+	margin: 0;
+}
+
+.feature-story__title a {
+	color: #1A2B50;
+	font-size: 48px;
+}
+
+.feature-story__score {
+	color: #1C8AFF;
+	font-size: 24px;
+	vertical-align: top;
+}
+
+.feature-story__link,
+.feature-story__metadata,
+.feature-story__metadata a {
+	color: #7C8795;
+	font-size: 12px;
+	font-weight: normal;
+}
