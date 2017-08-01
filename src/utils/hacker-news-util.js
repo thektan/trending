@@ -28,10 +28,20 @@ const formatStories = (data) => {
 
 /**
  * Gets the top stories from Hacker News.
+ * @param {Number} [page=1] The set of stories.
+ * @param {Number} [count=30] The amount of stories.
  * @return {Promise} Hacker news top stories.
  */
-const getTopStories = () => {
-	return hnapi().stories('top');
+const getTopStories = (page = 1, count = 30) => {
+	return hnapi().stories(
+		'top',
+		{
+			count: count,
+			page: page,
+		}
+	).then(
+		(stories) => formatStories(stories)
+	);
 };
 
 /**
@@ -44,6 +54,6 @@ const getSiteURL = (id) => {
 };
 
 export {
-	formatStories,
 	getTopStories,
+	SOURCE_NAME,
 };

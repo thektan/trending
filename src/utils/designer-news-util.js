@@ -43,6 +43,9 @@ const getSiteURL = (id) =>
 const getStories = () =>
 	fetch(`${BASE_URL}stories`)
 		.then((response) => response.json())
-		.then((data) => data.stories);
+		.then((data) => formatStories(data.stories));
 
-export {formatStories, getStories};
+export {
+	getStories,
+	SOURCE_NAME,
+};
