@@ -41,8 +41,11 @@ class DribbbleFeed extends Component {
 	 */
 	getDribbbleShots() {
 		DribbbleAPI.getShots().then(
-			(data) =>
-				this.setState({items: data.slice(0, this.props.amount)})
+			(data) => {
+				if (data.slice) {
+					this.setState({items: data.slice(0, this.props.amount)});
+				}
+			}
 		);
 	}
 
