@@ -65,6 +65,7 @@ class DribbbleFeed extends Component {
 							className="image-feed__item"
 							href={item.html_url}
 							key={item.id}
+							target="_blank"
 							title={item.title}
 						>
 							<img

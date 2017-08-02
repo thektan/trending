@@ -29,7 +29,7 @@ class FeatureStory extends Component {
 		return (
 			<div className="feature-story">
 				<h1 className="feature-story__title">
-					<a href={storyUrl || sourceUrl}>
+					<a href={storyUrl || sourceUrl} target="_blank">
 						{title}
 					</a>
 
@@ -43,7 +43,7 @@ class FeatureStory extends Component {
 				</h1>
 
 				<div className="feature-story__metadata">
-					<a href={sourceUrl}>
+					<a href={sourceUrl} target="_blank">
 						{commentCount >= 0 ?
 							commentCount + ' comments •' : ''}
 					</a> {formattedDate}
