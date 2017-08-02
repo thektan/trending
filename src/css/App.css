@@ -17,6 +17,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
+	max-width: 1400px;
 	padding: 10px 40px;
 }
 
