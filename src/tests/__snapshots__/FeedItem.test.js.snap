@@ -18,6 +18,7 @@ exports[`FeedItem renders 1`] = `
       <a
         className="feed-item__title-link"
         href="https://testurl.com"
+        target="_blank"
       >
         <span
           className="feed-item__title"
@@ -37,6 +38,7 @@ exports[`FeedItem renders 1`] = `
       >
         <a
           href="https://testurl.com"
+          target="_blank"
         >
           1 comments •
         </a>
