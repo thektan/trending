@@ -1,19 +1,11 @@
 ![trending logo](trending-logo-full-v2.png)
-![trending screenshot](trending-screenshot.png)
+![trending screenshot](trending-screenshot-2.png)
 
 # Trending
 
 [![Build Status](https://travis-ci.org/thektan/trending.svg?branch=master)](https://travis-ci.org/thektan/trending)
 
 A simple news reader application built on React. *Work in progress.*
-
-## Feeds To Add
-- [x] Hacker News
-- [x] Designer News
-- [x] Dribbble
-- [ ] Twitter
-- [ ] Medium
-- [ ] Reddit
 
 ### References
 
