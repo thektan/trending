@@ -1,5 +1,6 @@
 .feature-story {
-	margin: 20px 0 40px 0;
+	padding: 20px 0 40px 0;
+	position: relative;
 }
 
 .feature-story__title {

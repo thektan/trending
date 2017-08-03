@@ -48,6 +48,11 @@ class FeatureStory extends Component {
 							commentCount + ' comments •' : ''}
 					</a> {formattedDate}
 				</div>
+
+				<div className="background-accent
+					background-accent--large
+					background-accent--top-right"
+				></div>
 			</div>
 		);
 	}
