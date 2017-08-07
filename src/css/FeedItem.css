@@ -29,6 +29,10 @@
 	text-align: right;
 }
 
+.feed-item--hacker-news .feed-item__score {
+	color: #FF691C;
+}
+
 .feed-item__title {
 	color: #1A2B50;
 	font-size: 18px;

@@ -88,7 +88,12 @@ class StoryFeed extends Component {
 		).then(
 			([hackerNewsStories, designerNewsStories]) => {
 				this.setFeatureStory(hackerNewsStories);
-				this.setDesignerNewsStories(designerNewsStories, this.props.amount);
+
+				this.setDesignerNewsStories(
+					designerNewsStories,
+					this.props.amount
+				);
+
 				this.setHackerNewsStories(hackerNewsStories, this.props.amount);
 			}
 		);

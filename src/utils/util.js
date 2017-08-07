@@ -25,8 +25,15 @@ const getURLDomainName = (url = '') => {
 	return uri.hostname();
 };
 
+/**
+ * Converts a string name into a css valid class.
+ * @param  {string} name The name that will be converted.
+ * @return {string} Css class that can be used to style elements.
+ */
+const toCssClassName = (name) => name.toLowerCase().replace(' ', '-');
 
 export {
 	getFormattedDateString,
 	getURLDomainName,
+	toCssClassName,
 };

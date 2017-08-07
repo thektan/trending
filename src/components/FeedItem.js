@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import '../css/FeedItem.css';
-import {getFormattedDateString, getURLDomainName} from '../utils/util';
+import {
+	getFormattedDateString,
+	getURLDomainName,
+	toCssClassName,
+} from '../utils/util';
 
 /**
  * Feed item.
@@ -15,12 +19,20 @@ class FeedItem extends Component {
 	 * @return {string} Feed item markup.
 	 */
 	render() {
-		const {commentCount, score, date, siteUrl, title, url} = this.props;
+		const {
+			commentCount,
+			score,
+			date,
+			siteUrl,
+			sourceName,
+			title,
+			url,
+		} = this.props;
 
 		const formattedDate = getFormattedDateString(date);
 
 		return (
-			<li className="feed-item">
+			<li className={'feed-item feed-item--' + toCssClassName(sourceName)}>
 				<div className="feed-item__container">
 					<div className="feed-item__score">{score}</div>
 
