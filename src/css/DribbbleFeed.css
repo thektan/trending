@@ -2,12 +2,13 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-bottom: 20px;
 	width: 100%;
 }
 
 .image-feed__item {
-	margin-bottom: 2%;
-	width: 48%;
+	margin-bottom: 1.5%;
+	width: 15%;
 }
 
 .image-feed__item:last-child {
@@ -16,4 +17,9 @@
 
 .image-feed__image {
 	width: 100%;
+}
+
+.image-feed__header {
+	font-size: 16px;
+	margin: 0 0 20px 0;
 }

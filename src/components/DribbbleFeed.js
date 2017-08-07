@@ -58,23 +58,27 @@ class DribbbleFeed extends Component {
 		const {items} = this.state;
 
 		return (
-			<div className="image-feed__container">
-				{items.map(
-					(item) =>
-						<a
-							className="image-feed__item"
-							href={item.html_url}
-							key={item.id}
-							target="_blank"
-							title={item.title}
-						>
-							<img
-								className="image-feed__image"
-								src={item.images.teaser}
-								alt={item.description}
-							/>
-						</a>
-				)}
+			<div className="image-feed">
+				<h2 className="image-feed__header">Dribbble</h2>
+
+				<div className="image-feed__container">
+					{items.map(
+						(item) =>
+							<a
+								className="image-feed__item"
+								href={item.html_url}
+								key={item.id}
+								target="_blank"
+								title={item.title}
+							>
+								<img
+									className="image-feed__image"
+									src={item.images.teaser}
+									alt={item.description}
+								/>
+							</a>
+					)}
+				</div>
 			</div>
 		);
 	}

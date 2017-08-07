@@ -21,7 +21,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
-	max-width: 1400px;
+	max-width: 1000px;
 	padding: 10px 40px;
 }
 
@@ -44,12 +44,12 @@ a {
 	margin-right: 0;
 }
 
-.app__column.app__column--left {
+.app__column.app__column--side {
 	min-width: 400px;
 	width: 400px;
 }
 
-.app__column.app__column--right {
+.app__column.app__column--fill {
 	flex: 1;
 }
 

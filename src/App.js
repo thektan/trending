@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 import Header from './components/Header';
 
-import DribbbleFeed from './components/DribbbleFeed';
 import StoryFeed from './components/StoryFeed';
 
 import './css/App.css';
@@ -23,11 +22,7 @@ class App extends Component {
 				</div>
 
 				<div className="app__section">
-					<div className="app__column app__column--left">
-						<DribbbleFeed amount={12} />
-					</div>
-
-					<div className="app__column app__column--right">
+					<div className="app__column app__column--fill">
 						<StoryFeed amount={9} />
 					</div>
 				</div>

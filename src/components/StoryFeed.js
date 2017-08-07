@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import DribbbleFeed from './DribbbleFeed';
 import FeatureStory from './FeatureStory';
 import Feed from './Feed';
 import * as DesignerNewsUtil from '../utils/designer-news-util';
@@ -114,6 +115,8 @@ class StoryFeed extends Component {
 					header={HackerNewsUtil.SOURCE_NAME}
 					stories={this.state.hackerNewsStories}
 				/>
+
+				<DribbbleFeed amount={12} />
 
 				<Feed
 					header={DesignerNewsUtil.SOURCE_NAME}
