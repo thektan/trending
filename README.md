@@ -1,5 +1,5 @@
-![trending logo](trending-logo-full-v2.png)
-![trending screenshot](trending-screenshot-2.png)
+![trending logo](images/trending-logo-full-v2.png)
+![trending screenshot](images/trending-screenshot-3.png)
 
 # Trending
 
