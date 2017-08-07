@@ -2,7 +2,7 @@
 
 exports[`FeedItem renders 1`] = `
 <li
-  className="feed-item"
+  className="feed-item feed-item--"
 >
   <div
     className="feed-item__container"

@@ -30,7 +30,13 @@ const getURLDomainName = (url = '') => {
  * @param  {string} name The name that will be converted.
  * @return {string} Css class that can be used to style elements.
  */
-const toCssClassName = (name) => name.toLowerCase().replace(' ', '-');
+const toCssClassName = (name) => {
+	if (name) {
+		return name.toLowerCase().replace(' ', '-');
+	} else {
+		return '';
+	}
+};
 
 export {
 	getFormattedDateString,
