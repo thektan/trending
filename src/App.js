@@ -25,11 +25,6 @@ class App extends Component {
 				<div className="app__section">
 					<div className="app__column app__column--left">
 						<DribbbleFeed amount={12} />
-
-						<div className="background-accent
-							background-accent--small
-							background-accent--bottom-left"
-						></div>
 					</div>
 
 					<div className="app__column app__column--right">
