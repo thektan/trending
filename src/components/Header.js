@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import weather from 'yahoo-weather';
+import Isvg from 'react-inlinesvg';
 import Clock from './Clock';
 import Greeting from './Greeting';
 import Weather from './Weather';
+import logo from '../images/icon-small.svg';
+import '../css/Logo.css';
 import '../css/Header.css';
 
 /**
@@ -76,7 +79,7 @@ class Header extends Component {
 				</div>
 
 				<div className="header__section header__section--center">
-
+					<Isvg className="logo" src={logo}></Isvg>
 				</div>
 
 				<div className="header__section header__section--right">

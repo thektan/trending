@@ -7,6 +7,7 @@
     "mockdate": "^2.0.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-inlinesvg": "^0.6.2",
     "yahoo-weather": "^2.2.2"
   },
   "devDependencies": {

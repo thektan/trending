@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-
 import Header from './components/Header';
-
 import StoryFeed from './components/StoryFeed';
-
 import './css/App.css';
 
 /**
