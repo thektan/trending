@@ -1,5 +1,14 @@
 .weather {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
 	font-size: 21px;
 	font-weight: 600;
 	text-transform: uppercase;
+}
+
+.weather__icon {
+	display: flex;
+	padding-right: 3px;
 }

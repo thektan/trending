@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Isvg from 'react-inlinesvg';
+import iconSun from '../images/icon-sun.svg';
 import '../css/Weather.css';
 
 /**
@@ -16,7 +18,9 @@ class Weather extends Component {
 	render() {
 		return (
 			<span className="weather">
-				{this.props.temperature}&deg;{this.props.unit}
+				<Isvg className="weather__icon" src={iconSun}></Isvg>
+
+				<span>{this.props.temperature}&deg;{this.props.unit}</span>
 			</span>
 		);
 	}
