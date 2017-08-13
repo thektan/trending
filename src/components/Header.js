@@ -70,11 +70,13 @@ class Header extends Component {
 		return (
 			<div className="header">
 				<div className="header__section">
+					<Clock format="llll" />
+
 					<Greeting />
 				</div>
 
 				<div className="header__section header__section--center">
-					<Clock format="LTS" />
+
 				</div>
 
 				<div className="header__section header__section--right">

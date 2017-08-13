@@ -25,7 +25,7 @@ class Clock extends Component {
 	 * Updates the time to the current time with the format passed
 	 * from the component prop.
 	 */
-	updateTime() {
+	setTime() {
 		this.setState(
 			(prevState, props) => ({
 				date: moment().format(props.format),
@@ -34,13 +34,10 @@ class Clock extends Component {
 	}
 
 	/**
-	 * Sets the interval when the component mounts.
+	 * Sets the time when component mounts.
 	 */
 	componentDidMount() {
-		setInterval(
-			() => this.updateTime(),
-			1000
-		);
+		this.setTime();
 	}
 
 	/**
