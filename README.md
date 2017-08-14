@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-	<img src="images/trending-screenshot.png" alt="trending logo" />
+	<img src="images/trending-screenshot.png" alt="trending screenshot" />
 </p>
 
 ## About
