@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import weather from 'yahoo-weather';
-import Isvg from 'react-inlinesvg';
 import Clock from './Clock';
 import Greeting from './Greeting';
 import Weather from './Weather';
+import Isvg from 'react-inlinesvg';
 import iconLogo from '../images/icon-logo.svg';
 import '../css/Logo.css';
 import '../css/Header.css';

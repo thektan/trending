@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Isvg from 'react-inlinesvg';
+import iconPopular from '../images/icon-popular.svg';
 import '../css/FeedItem.css';
 import {
 	getFormattedDateString,
@@ -27,6 +29,7 @@ class FeedItem extends Component {
 			sourceName,
 			title,
 			url,
+			popular,
 		} = this.props;
 
 		const formattedDate = getFormattedDateString(date);
@@ -56,6 +59,14 @@ class FeedItem extends Component {
 								{commentCount >= 0 ? commentCount + ' comments •' : ''}
 							</a> {formattedDate}
 						</div>
+					</div>
+
+					<div className="badge-container">
+						{popular ?
+							<div className="badge badge--popular">
+								<Isvg className="icon" src={iconPopular}></Isvg>
+							</div> : ''
+						}
 					</div>
 				</div>
 			</li>

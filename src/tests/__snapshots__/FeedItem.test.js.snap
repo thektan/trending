@@ -46,6 +46,11 @@ exports[`FeedItem renders 1`] = `
         4 hours ago
       </div>
     </div>
+    <div
+      className="badge-container"
+    >
+      
+    </div>
   </div>
 </li>
 `;
