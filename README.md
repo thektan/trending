@@ -1,5 +1,5 @@
 <p align="center">
-	![trending logo](images/trending-logo-full-v2.png)
+	<img src="images/trending-logo-full-v2.png" alt="trending logo" />
 </p>
 
 <p align="center">
@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-	![trending screenshot](images/trending-screenshot.png)
+	<img src="images/trending-screenshot.png" alt="trending logo" />
 </p>
 
 ## About
