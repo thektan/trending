@@ -1,13 +1,29 @@
-![trending logo](images/trending-logo-full-v2.png)
-![trending screenshot](images/trending-screenshot-3.png)
+<p align="center">
+	![trending logo](images/trending-logo-full-v2.png)
+</p>
 
-# Trending
+<p align="center">
+	Answering the question: What's trending on the web right now?
+</p>
+
+<p align="center">
+	![trending screenshot](images/trending-screenshot.png)
+</p>
+
+## About
 
 [![Build Status](https://travis-ci.org/thektan/trending.svg?branch=master)](https://travis-ci.org/thektan/trending)
 
-A simple news reader application built on React. *Work in progress.*
+A quick-glance news reader built on React.
 
-### References
+Current feeds displayed:
+- Hacker News
+- Designer News
+- Dribbble
+
+[View the project board to see what's planned](https://github.com/thektan/trending/projects/1) or [request a new feature by submitting an issue](https://github.com/thektan/trending/issues/new).
+
+## References
 
 Tools:
 - https://github.com/HackerNews/API
