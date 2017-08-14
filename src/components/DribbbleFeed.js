@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import ReactPlaceholder from 'react-placeholder';
+import DribbblePlaceholder from './DribbblePlaceholder';
 import * as DribbbleAPI from '../utils/dribbble-api';
 import '../css/DribbbleFeed.css';
 
@@ -17,6 +19,7 @@ class DribbbleFeed extends Component {
 		super();
 
 		this.state = {
+			ready: false,
 			items: [],
 		};
 	}
@@ -33,6 +36,10 @@ class DribbbleFeed extends Component {
 	*/
 	componentDidUpdate() {
 		console.log('dribbble component updated', this.state);
+
+		if (!this.state.ready && this.state.items.length > 0) {
+			this.setState({ready: true});
+		}
 	}
 
 	/**
@@ -61,24 +68,29 @@ class DribbbleFeed extends Component {
 			<div className="image-feed">
 				<h2 className="image-feed__header">Dribbble</h2>
 
-				<div className="image-feed__container">
-					{items.map(
-						(item) =>
-							<a
-								className="image-feed__item"
-								href={item.html_url}
-								key={item.id}
-								target="_blank"
-								title={item.title}
-							>
-								<img
-									className="image-feed__image"
-									src={item.images.teaser}
-									alt={item.description}
-								/>
-							</a>
-					)}
-				</div>
+				<ReactPlaceholder
+					ready={this.state.ready}
+					customPlaceholder={<DribbblePlaceholder />}
+				>
+					<div className="image-feed__container">
+						{items.map(
+							(item) =>
+								<a
+									className="image-feed__item"
+									href={item.html_url}
+									key={item.id}
+									target="_blank"
+									title={item.title}
+								>
+									<img
+										className="image-feed__image"
+										src={item.images.teaser}
+										alt={item.description}
+									/>
+								</a>
+						)}
+					</div>
+				</ReactPlaceholder>
 			</div>
 		);
 	}

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import ReactPlaceholder from 'react-placeholder';
 import DribbbleFeed from './DribbbleFeed';
 import FeatureStory from './FeatureStory';
+import Placeholder from './Placeholder';
 import Feed from './Feed';
 import * as DesignerNewsUtil from '../utils/designer-news-util';
 import * as HackerNewsUtil from '../utils/hacker-news-util';
@@ -19,6 +21,7 @@ class StoryFeed extends Component {
 		super();
 
 		this.state = {
+			ready: false,
 			featureStory: {},
 			designerNewsStories: [],
 			hackerNewsStories: [],
@@ -100,10 +103,43 @@ class StoryFeed extends Component {
 	}
 
 	/**
+	 * Checks if the feature story has the required data.
+	 * @return {Boolean} True if the feature story is ready.
+	 */
+	isFeatureStoryReady() {
+		return this.state.featureStory !== {};
+	}
+
+	/**
+	 * Checks if all the story feeds in the compoment are loaded.
+	 * @return {Boolean} True if all the feeds have data.
+	 */
+	isFeedReady() {
+		return (this.state.designerNewsStories.length > 0)
+			&& (this.state.hackerNewsStories.length > 0);
+	}
+
+	/**
+	 * Checks of all the necessary data is ready to display the components.
+	 * When all data is ready, set the `ready` to true and the components
+	 * will display on the page.
+	 * @return {Boolean} True is return if state is already ready.
+	 */
+	setReadyState() {
+		if (this.state.ready) return true;
+
+		if (this.isFeatureStoryReady() && this.isFeedReady()) {
+			this.setState({ready: true});
+		}
+	}
+
+	/**
 	* Console if component updates.
 	*/
 	componentDidUpdate() {
-		console.log('component updated', this.state);
+		console.log('storyfeed component updated', this.state);
+
+		this.setReadyState();
 	}
 
 	/**
@@ -113,21 +149,26 @@ class StoryFeed extends Component {
 	*/
 	render() {
 		return (
-			<div className="story-feed">
-				<FeatureStory story={this.state.featureStory} />
+			<ReactPlaceholder
+				ready={this.state.ready}
+				customPlaceholder={<Placeholder />}
+			>
+				<div className="story-feed">
+					<FeatureStory story={this.state.featureStory} />
 
-				<Feed
-					header={HackerNewsUtil.SOURCE_NAME}
-					stories={this.state.hackerNewsStories}
-				/>
+					<Feed
+						header={HackerNewsUtil.SOURCE_NAME}
+						stories={this.state.hackerNewsStories}
+					/>
 
-				<DribbbleFeed amount={12} />
+					<DribbbleFeed amount={12} />
 
-				<Feed
-					header={DesignerNewsUtil.SOURCE_NAME}
-					stories={this.state.designerNewsStories}
-				/>
-			</div>
+					<Feed
+						header={DesignerNewsUtil.SOURCE_NAME}
+						stories={this.state.designerNewsStories}
+					/>
+				</div>
+			</ReactPlaceholder>
 		);
 	}
 }

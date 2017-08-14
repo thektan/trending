@@ -1,0 +1,75 @@
+@keyframes pulse {
+	0% {
+		background-color: #ECEEF1;
+	}
+
+	50% {
+		background-color: #F4F5F7;
+	}
+
+	100% {
+		background-color: #ECEEF1;
+	}
+}
+
+.placeholder__block {
+	animation: pulse 1s infinite;
+	margin-bottom: 20px;
+}
+
+.placeholder__block--full {
+	height: 150px;
+	width: 100%;
+}
+
+.placeholder__block--text {
+	height: 20px;
+	width: 200px;
+}
+
+.placeholder__container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+
+.placeholder__container .placeholder__block {
+	height: 100px;
+}
+
+.placeholder__container--thirds .placeholder__block {
+	width: 32%;
+}
+
+.placeholder__container--sixths .placeholder__block {
+	width: 15%;
+}
+
+.placeholder__bottom-fade {
+	background: -webkit-linear-gradient(
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	background-image: -moz-linear-gradient(
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	background-image: -o-linear-gradient(
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	background-image: linear-gradient(
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	background-image: -ms-linear-gradient(
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 100%
+	);
+
+	position: absolute;
+	bottom: 40px;
+	height: 200px;
+	width: 100%;
+}

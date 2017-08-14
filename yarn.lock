@@ -5211,7 +5211,7 @@ promise@7.1.1, promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.7, prop-types@~15.5.7:
+prop-types@^15.5.10, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@~15.5.7:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -5361,6 +5361,12 @@ react-inlinesvg@^0.6.2:
   dependencies:
     httpplease "^0.16"
     once "^1.4"
+
+react-placeholder@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-placeholder/-/react-placeholder-1.0.6.tgz#928de094f2aad5b3e3b81695ce78aa099f5d6214"
+  dependencies:
+    prop-types "^15.5.8"
 
 react-scripts@1.0.10:
   version "1.0.10"
