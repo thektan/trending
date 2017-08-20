@@ -26,7 +26,7 @@ class Feed extends Component {
 				if (score > 300) return true;
 				break;
 			case DesignerNewsUtil.SOURCE_NAME:
-				if (score > 50) return true;
+				if (score > 30) return true;
 				break;
 			default: return false;
 		}
