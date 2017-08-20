@@ -30,10 +30,6 @@ class Placeholder extends Component {
 					<div className="placeholder__block"></div>
 					<div className="placeholder__block"></div>
 					<div className="placeholder__block"></div>
-
-					<div className="placeholder__block"></div>
-					<div className="placeholder__block"></div>
-					<div className="placeholder__block"></div>
 				</div>
 
 				<div className="placeholder__bottom-fade"></div>

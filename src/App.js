@@ -20,7 +20,7 @@ class App extends Component {
 
 				<div className="app__section">
 					<div className="app__column app__column--fill">
-						<StoryFeed amount={9} />
+						<StoryFeed amount={6} />
 					</div>
 				</div>
 			</div>
