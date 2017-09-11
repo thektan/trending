@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import weather from 'yahoo-weather';
 import Clock from './Clock';
 import Greeting from './Greeting';
 import Weather from './Weather';
@@ -17,51 +16,10 @@ import '../css/Header.css';
  */
 class Header extends Component {
 	/**
-	 * Initializes the state.
-	 */
-	constructor() {
-		super();
-
-		this.state = {
-			temperature: '',
-			unit: 'f',
-		};
-	}
-
-	/**
-	 * Get the current location and set the state.
-	 */
-	componentDidMount() {
-		if ('geolocation' in navigator) {
-			navigator.geolocation.getCurrentPosition(
-				(position) => {
-					const lat = position.coords.latitude;
-					const long = position.coords.longitude;
-
-					this.getWeather(`(${lat},${long})`, this.state.unit);
-				}
-			);
-		}
-	}
-
-	/**
 	* Console if component updates for debugging purposes.
 	*/
 	componentDidUpdate() {
 		console.log('Header component updated', this.state);
-	}
-
-	/**
-	 * Gets the weather of a specific location.
-	 * @param {string} location The location where to get the weather of.
-	 * @param {string} [unit='f']  Either 'c' or 'f'. Defaults to 'f'.
-	 */
-	getWeather(location, unit='f') {
-		weather(location, unit).then(
-			(info) => {
-				this.setState({temperature: info.item.condition.temp});
-			}
-		);
 	}
 
 	/**
@@ -84,8 +42,8 @@ class Header extends Component {
 
 				<div className="header__section header__section--right">
 					<Weather
-						temperature={this.state.temperature}
-						unit={this.state.unit}
+						location={this.props.weatherLocation}
+						unit={this.props.weatherUnit}
 					/>
 				</div>
 			</div>
