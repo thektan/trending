@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Header from './components/Header';
 import StoryFeed from './components/StoryFeed';
+import storage from 'local-storage';
 import './css/App.css';
 
 /**
@@ -15,29 +16,8 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			location: '90012',
+			location: storage.get('location') || '90012',
 		};
-	}
-
-	/**
-	 * Gets the location. This is used to get the data for the weather.
-	 * @return {string} Zip code.
-	 */
-	getLocation() {
-		let location = '90012';
-
-		if ('geolocation' in navigator) {
-			navigator.geolocation.getCurrentPosition(
-				(position) => {
-					const lat = position.coords.latitude;
-					const long = position.coords.longitude;
-
-					location = `(${lat},${long})`;
-				}
-			);
-		}
-
-		return location;
 	}
 
 	/**

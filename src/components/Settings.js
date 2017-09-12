@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Isvg from 'react-inlinesvg';
 import Modal from 'react-modal';
+import storage from 'local-storage';
 import iconSettings from '../images/icon-settings.svg';
 import '../css/Settings.css';
 
@@ -14,6 +15,7 @@ const modalStyles = {
 		right: 'auto',
 		bottom: 'auto',
 		marginRight: '-50%',
+		padding: '25px 30px',
 		width: '100%',
 		maxWidth: '400px',
 		transform: 'translate(-50%, -50%)',
@@ -36,11 +38,13 @@ class Settings extends Component {
 
 		this.state = {
 			showModal: false,
+			location: storage.get('location') || '',
 		};
 
 		this.handleClose = this.handleClose.bind(this);
 		this.handleOpen = this.handleOpen.bind(this);
 		this.handleSave = this.handleSave.bind(this);
+		this.handleInputChange = this.handleInputChange.bind(this);
 	}
 
 
@@ -69,7 +73,13 @@ class Settings extends Component {
 	 * Saves the settings and closes the modal.
 	 */
 	handleSave() {
+		storage.set('location', this.state.location);
+
 		this.handleClose();
+	}
+
+	handleInputChange(event) {
+		this.setState({location: event.target.value});
 	}
 
 	/**
@@ -103,7 +113,13 @@ class Settings extends Component {
 							</div>
 						</label>
 
-						<input name="location" placeholder="Enter your zip code" />
+						<input
+							id="location"
+							name="location"
+							placeholder="Enter your zip code"
+							onChange={this.handleInputChange}
+							value={this.state.location}
+						/>
 					</div>
 
 					<div className="modal__footer">
