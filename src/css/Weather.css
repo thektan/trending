@@ -12,3 +12,7 @@
 	display: flex;
 	padding-right: 3px;
 }
+
+.weather__icon svg {
+	fill: #1A2B50;
+}

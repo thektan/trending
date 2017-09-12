@@ -12,6 +12,7 @@
 }
 
 .settings__button svg {
+	fill: #1A2B50;
 	height: 20px;
 	width: 20px;
 }
