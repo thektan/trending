@@ -9,6 +9,7 @@ body {
 	background-color: #FFF;
 	color: #1A2B50;
 	line-height: 1.5;
+	font-size: 14px;
 }
 
 a {
@@ -79,4 +80,44 @@ a {
 .background-accent.background-accent--small {
 	height: 30px;
 	width: 60%;
+}
+
+/* ------------------ Buttons ------------------ */
+
+.button {
+	border: none;
+	border-radius: 2px;
+	background-color: #dcdfe4;
+	cursor: pointer;
+	font-size: 14px;
+	padding: 8px 16px;
+}
+
+.button--primary {
+	background-color: #1A2B50;
+	color: #FFF;
+}
+
+/* ------------------ Inputs ------------------ */
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.label__description {
+	font-size: 12px;
+	font-weight: 400;
+	color: #7C8795;
+}
+
+input {
+	box-sizing: border-box;
+	border: none;
+	border: 1px solid #dcdfe4;
+	border-radius: 2px;
+	font-size: 14px;
+	padding: 8px 14px;
+	width: 100%;
 }

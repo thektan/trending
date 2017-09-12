@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Clock from './Clock';
 import Greeting from './Greeting';
+import Settings from './Settings';
 import Weather from './Weather';
 import Isvg from 'react-inlinesvg';
 import iconLogo from '../images/icon-logo.svg';
@@ -45,6 +46,8 @@ class Header extends Component {
 						location={this.props.weatherLocation}
 						unit={this.props.weatherUnit}
 					/>
+
+					<Settings />
 				</div>
 			</div>
 		);
