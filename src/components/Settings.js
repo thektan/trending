@@ -7,15 +7,18 @@ import '../css/Settings.css';
 
 const modalStyles = {
 	overlay: {
-		backgroundColor: 'rgba(0, 0, 0, 0.5)',
+		backgroundColor: 'rgba(0, 0, 0, 0.2)',
 	},
 	content: {
 		top: '50%',
 		left: '50%',
 		right: 'auto',
 		bottom: 'auto',
+		borderRadius: '0',
+		border: 'none',
+		boxShadow: '0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05)',
 		marginRight: '-50%',
-		padding: '25px 30px',
+		padding: '20px 28px',
 		width: '100%',
 		maxWidth: '400px',
 		transform: 'translate(-50%, -50%)',
