@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "start": "node server/server.js",
-    "heroku-postbuild": "cd view/ && yarn && yarn build"
+    "heroku-postbuild": "cd view/ && yarn --production=false && yarn build"
   },
   "dependencies": {
     "cors": "^2.8.4",
