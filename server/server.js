@@ -1,17 +1,15 @@
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Enable CORS for all routes.
+app.use(cors());
+
 // Priority serve any static files.
 app.use(express.static(path.resolve(__dirname, '../view/build')));
-
-// Answer API requests.
-app.get('/api', function (req, res) {
-	res.set('Content-Type', 'application/json');
-	res.send('{"message":"Hello from the custom server!"}');
-});
 
 // All remaining requests return the React app, so it can handle routing.
 app.get('*', function(request, response) {
