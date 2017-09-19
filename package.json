@@ -1,0 +1,18 @@
+{
+  "name": "trending",
+  "version": "1.0.0",
+  "description": "Answers the question: What's currently trending?",
+  "main": "server/server.js",
+  "repository": "https://github.com/thektan/trending.git",
+  "author": "Kevin Tan",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node server/server.js",
+    "heroku-postbuild": "cd view/ && yarn && yarn build"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.4"
+  }
+}
