@@ -14,5 +14,10 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.1",
+    "eslint-config-google": "^0.9.1",
+    "react-scripts": "1.0.10"
   }
 }
