@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import '../css/FeatureStory.css';
 import {getFormattedDateString, getURLDomainName} from '../utils/util';
-import ImageResolver from 'image-resolver';
 
 /**
  * The feature story which displays in big text.
@@ -24,23 +23,11 @@ class FeatureStory extends Component {
 	 * @param {string} url The url to request the image from.
 	 */
 	setImage(url) {
-		let imageResolver = new ImageResolver();
-
-		imageResolver.register(new ImageResolver.FileExtension());
-		imageResolver.register(new ImageResolver.MimeType());
-		imageResolver.register(new ImageResolver.Opengraph());
-		imageResolver.register(new ImageResolver.Webpage());
-
-		imageResolver.resolve(
-			url,
-			(result) => {
-				if (result) {
-					console.log(result.image);
-				} else {
-					console.log('No image found');
-				}
-			}
-		);
+		fetch('/api/imageresolver/' + encodeURIComponent(url))
+			.then((response) => response.json())
+			.then((data) => {
+				console.log('data', data);
+			});
 	}
 
 	/**
