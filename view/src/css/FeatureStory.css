@@ -27,3 +27,13 @@
 	font-size: 12px;
 	font-weight: normal;
 }
+
+.feature-story__image {
+	background-color: #2FF4AF;
+	position: absolute;
+	z-index: -1;
+	right: 0;
+	top: 0;
+	height: 100px;
+	width: 80%;
+}

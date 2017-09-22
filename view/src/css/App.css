@@ -62,34 +62,6 @@ a {
 	flex: 1;
 }
 
-/* ------------------ Background Accent ------------------ */
-
-.background-accent {
-	background-color: #2FF4AF;
-	position: absolute;
-	z-index: -1;
-}
-
-.background-accent.background-accent--top-right {
-	right: 0;
-	top: 0;
-}
-
-.background-accent.background-accent--bottom-left {
-	bottom: 0;
-	left: 0;
-}
-
-.background-accent.background-accent--large {
-	height: 100px;
-	width: 80%;
-}
-
-.background-accent.background-accent--small {
-	height: 30px;
-	width: 60%;
-}
-
 /* ------------------ Buttons ------------------ */
 
 .button {

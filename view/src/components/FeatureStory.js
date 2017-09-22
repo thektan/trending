@@ -70,10 +70,7 @@ class FeatureStory extends Component {
 					</a> {formattedDate}
 				</div>
 
-				<div className="background-accent
-					background-accent--large
-					background-accent--top-right"
-				></div>
+				<div className="feature-story__image"></div>
 			</div>
 		);
 	}
