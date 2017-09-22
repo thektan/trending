@@ -8,6 +8,9 @@ import {getFormattedDateString, getURLDomainName} from '../utils/util';
  * @class FeatureStory
  * @extends {Component}
  */
+
+ const featureStoryImageElementId = 'featureStoryImage';
+
 class FeatureStory extends Component {
 	/**
 	 * Get the image when this component is ready.
@@ -26,7 +29,13 @@ class FeatureStory extends Component {
 		fetch('/api/imageresolver/' + encodeURIComponent(url))
 			.then((response) => response.json())
 			.then((data) => {
-				console.log('data', data);
+				console.log('image resolver data', data);
+
+				let featureStoryImageElement =
+					document.getElementById(featureStoryImageElementId);
+
+				featureStoryImageElement.style.backgroundImage =
+					`url('${data.imageURL}')`;
 			});
 	}
 
@@ -70,7 +79,12 @@ class FeatureStory extends Component {
 					</a> {formattedDate}
 				</div>
 
-				<div className="feature-story__image"></div>
+				<div className="feature-story__image-wrapper">
+					<div
+						id={featureStoryImageElementId}
+						className="feature-story__image"
+					></div>
+				</div>
 			</div>
 		);
 	}

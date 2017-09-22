@@ -28,12 +28,34 @@
 	font-weight: normal;
 }
 
+.feature-story__image-wrapper,
 .feature-story__image {
-	background-color: #2FF4AF;
+	height: 250px;
+	width: 90%;
+}
+
+.feature-story__image-wrapper {
 	position: absolute;
 	z-index: -1;
 	right: 0;
 	top: 0;
-	height: 100px;
-	width: 80%;
+}
+
+.feature-story__image {
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	right: -40px;
+	top: 0;
+}
+
+.feature-story__image::after {
+	content: '';
+	background-color: #2FF4AF;
+	position: absolute;
+	z-index: -2;
+	right: -20px;
+	top: -20px;
+	height: 100%;
+	width: 100%;
 }
