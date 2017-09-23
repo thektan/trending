@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "cors": "^2.8.4",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "raven": "^2.1.2"
   },
   "devDependencies": {
     "eslint": "^4.7.1",
