@@ -4,8 +4,8 @@ import '../css/FeatureStory.css';
 import {getFormattedDateString, getURLDomainName} from '../utils/util';
 
 const filter = 'duotone';
-const filterColorOne = [47, 244, 175];
-const filterColorTwo = [250, 250, 250];
+const filterColorOne = [74, 136, 236];
+const filterColorTwo = [111, 224, 195];
 
 /**
  * The feature story which displays in big text.
