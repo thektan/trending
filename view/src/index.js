@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Raven from 'raven';
+import Raven from 'raven-js';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './css/index.css';
