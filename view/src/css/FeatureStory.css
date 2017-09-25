@@ -28,34 +28,20 @@
 	font-weight: normal;
 }
 
-.feature-story__image-wrapper,
-.feature-story__image {
-	height: 250px;
-	width: 90%;
-}
-
 .feature-story__image-wrapper {
 	position: absolute;
-	z-index: -1;
-	right: 0;
+	height: 200px;
+	width: 90%;
+	right: -40px;
 	top: 0;
+	z-index: -1;
+
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	filter: contrast(1.3);
 }
 
 .feature-story__image {
-	background-size: cover;
-	background-position: center;
-	position: absolute;
-	right: -40px;
-	top: 0;
-}
-
-.feature-story__image::after {
-	content: '';
-	background-color: #2FF4AF;
-	position: absolute;
-	z-index: -2;
-	right: -20px;
-	top: -20px;
-	height: 100%;
 	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
 }

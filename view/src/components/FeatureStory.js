@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
+import ImageFilter from 'react-image-filter';
 import '../css/FeatureStory.css';
 import {getFormattedDateString, getURLDomainName} from '../utils/util';
+
+const filter = 'duotone';
+const filterColorOne = [47, 244, 175];
+const filterColorTwo = [250, 250, 250];
 
 /**
  * The feature story which displays in big text.
@@ -8,10 +13,18 @@ import {getFormattedDateString, getURLDomainName} from '../utils/util';
  * @class FeatureStory
  * @extends {Component}
  */
-
- const featureStoryImageElementId = 'featureStoryImage';
-
 class FeatureStory extends Component {
+	/**
+	 * Initalize the states.
+	 */
+	constructor() {
+		super();
+
+		this.state = {
+			image: '',
+		};
+	}
+
 	/**
 	 * Get the image when this component is ready.
 	 */
@@ -22,6 +35,13 @@ class FeatureStory extends Component {
 	}
 
 	/**
+	 * Console log when component updates with the current state.
+	 */
+	componentDidUpdate() {
+		console.log('FeatureStory updated', this.state);
+	}
+
+	/**
 	 * Sets the feature story image.
 	 * @param {string} url The url to request the image from.
 	 */
@@ -29,13 +49,7 @@ class FeatureStory extends Component {
 		fetch('/api/imageresolver/' + encodeURIComponent(url))
 			.then((response) => response.json())
 			.then((data) => {
-				console.log('image resolver data', data);
-
-				let featureStoryImageElement =
-					document.getElementById(featureStoryImageElementId);
-
-				featureStoryImageElement.style.backgroundImage =
-					`url('${data.imageURL}')`;
+				this.setState({image: data.imageURL});
 			});
 	}
 
@@ -80,10 +94,13 @@ class FeatureStory extends Component {
 				</div>
 
 				<div className="feature-story__image-wrapper">
-					<div
-						id={featureStoryImageElementId}
+					<ImageFilter
+						image={this.state.image}
+						filter={filter}
+						colorOne={filterColorOne}
+						colorTwo={filterColorTwo}
 						className="feature-story__image"
-					></div>
+					/>
 				</div>
 			</div>
 		);
