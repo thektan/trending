@@ -37,7 +37,17 @@ class FeedItem extends Component {
 		return (
 			<li className={'feed-item feed-item--' + toCssClassName(sourceName)}>
 				<div className="feed-item__container">
-					<div className="feed-item__score">{score}</div>
+					<div className="feed-item__score">
+						{score}
+
+						<div className="badge-container">
+							{popular ?
+								<div className="badge badge--popular">
+									<Isvg className="icon" src={iconPopular}></Isvg>
+								</div> : ''
+							}
+						</div>
+					</div>
 
 					<div className="feed-item__content">
 						<a
@@ -59,14 +69,6 @@ class FeedItem extends Component {
 								{commentCount >= 0 ? commentCount + ' comments •' : ''}
 							</a> {formattedDate}
 						</div>
-					</div>
-
-					<div className="badge-container">
-						{popular ?
-							<div className="badge badge--popular">
-								<Isvg className="icon" src={iconPopular}></Isvg>
-							</div> : ''
-						}
 					</div>
 				</div>
 			</li>
