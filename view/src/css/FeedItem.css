@@ -27,6 +27,8 @@
 	min-width: 50px;
 	margin-right: 20px;
 	text-align: right;
+
+	position: relative; /* For badge absolute positioning */
 }
 
 .feed-item--hacker-news .feed-item__score {
@@ -61,7 +63,9 @@
 /* ------------------ Badges ------------------*/
 
 .badge-container {
-	position: relative; /* For badge absolute positioning */
+	position: absolute;
+	top: 25px;
+	right: -5px;
 }
 
 .badge {
@@ -74,10 +78,10 @@
 
 	height: 30px;
 	width: 30px;
+}
 
-	position: absolute;
-	top: 0;
-	right: 0;
+.badge:not(:first-child) {
+	margin-top: -5px;
 }
 
 .badge--popular {
@@ -88,4 +92,15 @@
 	fill: #FFF;
 	height: 20px;
 	width: 20px;
+}
+
+.badge--discuss {
+	background-color: rgb(22, 204, 104);
+}
+
+.badge--discuss svg {
+	fill: #FFF;
+	margin-top: 2px;
+	height: 17px;
+	width: 17px;
 }

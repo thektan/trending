@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Isvg from 'react-inlinesvg';
+import iconDiscuss from '../images/icon-discuss.svg';
 import iconPopular from '../images/icon-popular.svg';
 import '../css/FeedItem.css';
 import {
@@ -23,6 +24,7 @@ class FeedItem extends Component {
 	render() {
 		const {
 			commentCount,
+			discuss,
 			score,
 			date,
 			siteUrl,
@@ -44,6 +46,12 @@ class FeedItem extends Component {
 							{popular ?
 								<div className="badge badge--popular">
 									<Isvg className="icon" src={iconPopular}></Isvg>
+								</div> : ''
+							}
+
+							{discuss ?
+								<div className="badge badge--discuss">
+									<Isvg className="icon" src={iconDiscuss}></Isvg>
 								</div> : ''
 							}
 						</div>
