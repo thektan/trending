@@ -11,6 +11,12 @@ exports[`FeedItem renders 1`] = `
       className="feed-item__score"
     >
       1
+      <div
+        className="badge-container"
+      >
+        
+        
+      </div>
     </div>
     <div
       className="feed-item__content"
@@ -45,11 +51,6 @@ exports[`FeedItem renders 1`] = `
          
         4 hours ago
       </div>
-    </div>
-    <div
-      className="badge-container"
-    >
-      
     </div>
   </div>
 </li>
