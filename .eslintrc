@@ -1,6 +1,19 @@
 {
-  "extends": ["google", "react-app"],
-  "rules": {
-     "no-tabs": 0
-  }
+	"extends": [
+		"google",
+		"react-app"
+	],
+	"plugins": [
+		"jest"
+	],
+	"env": {
+		"jest": true
+	},
+	"rules": {
+		"jest/no-disabled-tests": "warn",
+		"jest/no-focused-tests": "error",
+		"jest/no-identical-title": "error",
+		"jest/valid-expect": "error",
+		"no-tabs": 0
+	}
 }

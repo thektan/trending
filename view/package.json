@@ -1,5 +1,5 @@
 {
-  "name": "trending",
+  "name": "trending-view",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -26,6 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test-coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:5000/"

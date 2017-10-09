@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "start": "node server/server.js",
-    "test": "cd view && yarn test",
+    "test": "cd view && yarn test && cd .. && yarn jest",
     "heroku-postbuild": "cd view/ && yarn --production=false && yarn build"
   },
   "dependencies": {
@@ -28,8 +28,16 @@
     "eslint-config-react-app": "^2.0.1",
     "eslint-plugin-flowtype": "^2.34.1",
     "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jest": "^21.2.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
+    "jest": "^21.2.1",
+    "jest-runner-eslint": "^0.3.0",
     "react-scripts": "1.0.10"
+  },
+  "jest": {
+    "runner": "jest-runner-eslint",
+    "displayName": "eslint",
+    "testMatch": ["<rootDir>/view/src/components/*.js"]
   }
 }
