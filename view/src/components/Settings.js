@@ -81,6 +81,10 @@ class Settings extends Component {
 		this.handleClose();
 	}
 
+	/**
+	 * What happens when input changes.
+	 * @param {event} event
+	 */
 	handleInputChange(event) {
 		this.setState({location: event.target.value});
 	}

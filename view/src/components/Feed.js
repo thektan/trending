@@ -38,7 +38,7 @@ class Feed extends Component {
 	 * on the story source.
 	 * @param {Number} comments The comment count of the story.
 	 * @param {String} source The source's site name.
-	 * @returns {Boolean} True if the story is a discussion.
+	 * @return {Boolean} True if the story is a discussion.
 	 */
 	isDiscussion(comments, source) {
 		switch (source) {
@@ -70,7 +70,10 @@ class Feed extends Component {
 							<FeedItem
 								commentCount={story.commentCount}
 								date={story.date}
-								discuss={this.isDiscussion(story.commentCount, story.sourceName)}
+								discuss={this.isDiscussion(
+									story.commentCount,
+									story.sourceName
+								)}
 								key={story.id}
 								score={story.score}
 								siteUrl={story.sourceUrl}
