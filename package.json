@@ -9,6 +9,7 @@
   "private": true,
   "scripts": {
     "start": "node server/server.js",
+    "test": "cd view && yarn test",
     "heroku-postbuild": "cd view/ && yarn --production=false && yarn build"
   },
   "dependencies": {
