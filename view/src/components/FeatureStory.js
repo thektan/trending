@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Raven from 'raven-js';
 import ImageFilter from 'react-image-filter';
 import '../css/FeatureStory.css';
 import {getFormattedDateString, getURLDomainName} from '../utils/util';
@@ -15,7 +16,7 @@ const filterColorTwo = [111, 224, 195];
  */
 class FeatureStory extends Component {
 	/**
-	 * Initalize the states.
+	 * Initialize the states.
 	 */
 	constructor() {
 		super();
@@ -49,6 +50,15 @@ class FeatureStory extends Component {
 		fetch('/api/imageresolver/' + encodeURIComponent(url))
 			.then((response) => response.json())
 			.then((data) => {
+				if (data.imageURL !== '') {
+					Raven.captureMessage('An image could not be found from the source', {
+						level: 'warning',
+						extra: {
+							url: url,
+						},
+					});
+				}
+
 				this.setState({image: data.imageURL});
 			});
 	}
