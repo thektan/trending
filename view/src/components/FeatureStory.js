@@ -50,7 +50,7 @@ class FeatureStory extends Component {
 		fetch('/api/imageresolver/' + encodeURIComponent(url))
 			.then((response) => response.json())
 			.then((data) => {
-				if (data.imageURL !== '') {
+				if (data.imageURL === '') {
 					Raven.captureMessage('An image could not be found from the source', {
 						level: 'warning',
 						extra: {
