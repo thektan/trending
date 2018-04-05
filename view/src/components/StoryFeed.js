@@ -161,8 +161,6 @@ class StoryFeed extends Component {
 						stories={this.state.hackerNewsStories}
 					/>
 
-					<DribbbleFeed amount={12} />
-
 					<Feed
 						header={DesignerNewsUtil.SOURCE_NAME}
 						stories={this.state.designerNewsStories}
