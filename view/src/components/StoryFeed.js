@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ReactPlaceholder from 'react-placeholder';
-import DribbbleFeed from './DribbbleFeed';
 import FeatureStory from './FeatureStory';
 import Placeholder from './Placeholder';
 import Feed from './Feed';
